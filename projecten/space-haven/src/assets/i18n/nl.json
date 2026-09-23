@@ -1,0 +1,77 @@
+{
+  "HEADER": {
+    "HOME": "Thuispagina",
+    "ACCOUNT": "Account",
+    "LANGUAGE": "Taal",
+    "LOGOUT": "Log uit"
+  },
+
+  "ACCOUNT": {
+    "EMAIL": "E-mail",
+    "PASSWORD": "Wachtwoord",
+    "NO_ACCOUNT": "Nog geen account? Maak hier een account aan",
+    "ROLE_USER": "Gebruiker",
+    "ROLE_ADMIN": "Beheerder",
+    "DETAILBTN": "Gegevens",
+    "SHIPBTN": "Schepen",
+    "RESERVATIONBTN": "Reserveringen",
+    "REGISTERSHIPBTN": "Schip toevoegen",
+    "DETAILS": "Gegevens",
+    "SHIPS": "Schepen",
+    "RESERVATIONS": "Reserveringen",
+    "DETAILSTITLE": "Accountgegevens",
+    "ROLE": "Rol:",
+    "FACTION": "Factie:",
+    "undefined": "Geen factie",
+    "EDIT": "Bewerken",
+    "SHIP": "Schip:",
+    "SHIPSIZE": "Schip grootte:",
+    "SHIPTYPE": "Schip type:",
+    "HISTORY": "Geschiedenis",
+    "NOSHIPS": "Geen schepen gevonden",
+    "NOUSER": "Geen gebruiker gevonden",
+    "VEHICLES": "Mijn Schepen",
+    "ACTIVERESERVE": "Actieve Reserveringen",
+    "REGISTER": "Registreren",
+    "LOGIN": "Inloggen"
+  },
+
+  "HANGAR": {
+    "LEVEL": "Niveau",
+    "true": "Buiten gebruik",
+    "false": "Operationeel",
+    "LEVEL1": "Niveau 1",
+    "LEVEL2": "Niveau 2",
+    "RESERVATION_DETAILS": "Reservatie",
+    "END_TIME": "Eind tijd",
+    "BONUS": "CHEWBACCA-PUNTEN"
+  },
+
+  "CREATE": {
+    "DANGEROUSWARE": "Bevat gevaarlijke goederen",
+    "MILITARY": "Militair",
+    "NONMIL": "Normaal",
+    "SMALL":"Klein",
+    "MEDIUM":"Gemiddeld",
+    "LARGE": "Groot",
+    "ADDSHIP": "Schip Toevoegen",
+    "CANCEL": "Cancel"
+  },
+
+  "RESERVATION": {
+    "SHIP": "Kies uw Schip",
+    "MAKE": "Reserveer nu",
+    "START": "Begindatum",
+    "END":"Einddatum",
+    "CREATE":"Reserveer",
+    "CANCEL": "Cancel"
+  },
+
+  "ADMIN": {
+    "RESERVATION_TITLE": "Reserveringen",
+    "RESERVATION": "Reservatie {{id}}: eindigt op {{endTime}}",
+    "DASHBOARD": "Admin Dashboard",
+    "MANAGER": "Reserveringen Beheren",
+    "DOCKS": "Dock Informatie"
+  }
+}

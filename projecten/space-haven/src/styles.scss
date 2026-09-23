@@ -1,0 +1,67 @@
+
+@font-face {
+  font-family: 'Aurebesh';
+  src: url('assets/fonts/Aurebesh.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0 !important;
+  font-family: 'Arial', sans-serif;
+  cursor: url('assets/images/spaceship-cursor.png') 16 16, auto;
+  
+}
+
+
+
+.aurebesh {
+  font-family: 'Aurebesh', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+$sparkle-colors: #fffacd, #ff69b4, #add8e6, #ffffff;
+
+@keyframes sparkle-fade {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+
+.sparkle {
+  position: absolute;
+  pointer-events: none;
+  font-size: 14px + random(6); // random tussen 14px en 20px
+  animation: sparkle-fade 0.8s ease-out forwards;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+
+  // willekeurige kleur kiezen uit sparkle-colors
+  color: nth($sparkle-colors, random(length($sparkle-colors)));
+
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #ff69b4;
+
+  &::selection {
+    background: none;
+  }
+
+  @font-face {
+    font-family: 'Star Jedi';
+    src: url('assets/fonts/Rajdhani-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+}
+

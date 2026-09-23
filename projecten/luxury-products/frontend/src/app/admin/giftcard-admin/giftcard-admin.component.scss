@@ -1,0 +1,196 @@
+.back-btn {
+  display: inline-block;
+  margin-bottom: 16px;
+  background: #eee;
+  color: #333;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.2s;
+}
+.back-btn:hover {
+  background: #ddd;
+}
+
+.giftcard-admin-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+h2 {
+  margin: 20px 0 15px;
+  color: #444;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.loading-spinner {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+/* Tab navigation */
+.tab-navigation {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-navigation button {
+  background-color: #f1f1f1;
+  color: #333;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab-navigation button:hover {
+  background-color: #e1e1e1;
+}
+
+.tab-navigation button.active {
+  background-color: #fff;
+  color: #4CAF50;
+  border-bottom: 2px solid #4CAF50;
+  font-weight: bold;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.create-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button[disabled]:hover {
+  background-color: #cccccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.list-section button {
+  margin-right: 5px;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+/* Button colors */
+button {
+  background-color: #4CAF50; /* Green for primary actions */
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button[disabled] {
+  background-color: #cccccc;
+}
+
+/* Delete button */
+tr button:nth-child(2) {
+  background-color: #f44336; /* Red for delete */
+}
+
+tr button:nth-child(2):hover {
+  background-color: #d32f2f;
+}
+
+/* Cancel button */
+tr button:nth-child(2):not([disabled]) {
+  background-color: #f44336;
+}
+
+tr button:nth-child(2):not([disabled]):hover {
+  background-color: #d32f2f;
+}

@@ -1,0 +1,43 @@
+<main class="account-page">
+  <img class="station-img" [src]="'assets/images/spacestation.png'" alt="">
+  <div class="top-navigation">
+    <button (click)="setActiveTab('gegevens')" [class.active]="activeTab === 'gegevens'">
+      {{ 'ACCOUNT.DETAILBTN' | translate }}
+      <span *ngIf="activeTab === 'gegevens'">↑</span>
+    </button>
+    <button (click)="setActiveTab('voertuigen')" [class.active]="activeTab === 'voertuigen'">
+      {{ 'ACCOUNT.SHIPBTN' | translate }}
+      <span *ngIf="activeTab === 'voertuigen'">↑</span>
+    </button>
+    <button *ngIf="isLoggedIn()" (click)="goToCreateShip()">{{  'ACCOUNT.REGISTERSHIPBTN' | translate }}</button>
+
+    <button (click)="setActiveTab('reservaties')" [class.active]="activeTab === 'reservaties'">
+      {{ 'ACCOUNT.RESERVATIONBTN' | translate }}
+      <span *ngIf="activeTab === 'reservaties'">↑</span>
+    </button>
+  </div>
+  <section class="account-container" *ngIf="activeTab === 'gegevens'">
+    <h1>{{ 'ACCOUNT.DETAILSTITLE' | translate }}</h1>
+    <div *ngIf="user; else noUser">
+        <p><strong>Email:</strong> {{ user()!.email }}</p>
+        <p><strong>{{ 'ACCOUNT.ROLE' | translate }}</strong> {{ ('ACCOUNT.' + (isAdmin() ? 'ROLE_ADMIN' : 'ROLE_USER')) | translate }}</p>
+        <p><strong>{{ 'ACCOUNT.FACTION' | translate }}</strong> {{user()!.userFaction.name}}</p>
+    </div>
+
+    <ng-template #noUser>
+      <p>{{ 'ACCOUNT.NOUSER' | translate }}</p>
+    </ng-template>
+  </section>
+
+  <section class="vehicle-container" *ngIf="activeTab === 'voertuigen'">
+    <h3>{{ 'ACCOUNT.VEHICLES' | translate }}</h3>
+    <app-ship></app-ship>
+    <ng-template #noUser>
+      <p>{{ 'ACCOUNT.NOUSER' | translate }}</p>
+    </ng-template>
+  </section>
+
+  <section class="reservation-container" *ngIf="activeTab === 'reservaties'">
+    <app-my-reservation></app-my-reservation>
+  </section>
+</main>

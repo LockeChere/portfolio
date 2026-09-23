@@ -1,0 +1,88 @@
+/* Zorg ervoor dat de volledige hoogte van de pagina wordt gebruikt */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #ff81b7;
+}
+
+.admin-panel {
+  width: 100%;
+  max-width: 500px; 
+  padding: 20px;
+  text-align: center;
+  min-height: 90vh;
+  margin-top: 70px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%; 
+  max-width: 500px;
+  padding: 20px; 
+  background-color: #90fb6c; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #ec6da2;
+  color: rgb(255, 141, 205);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #218838;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ff7ca7;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+button {
+  margin-left: 10px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+
+  &:first-of-type {
+    background-color: #783d3d;
+    color: black;
+  }
+
+  &:last-of-type {
+    background-color: #e660b9;
+    color: rgb(255, 255, 255);
+
+    &:hover {
+      background-color: #48a957;
+    }
+  }
+}

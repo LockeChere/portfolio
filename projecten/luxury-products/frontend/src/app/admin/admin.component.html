@@ -1,0 +1,84 @@
+<div class="admin-container">
+  <h1>{{ 'admin.dashboard' | translate }}</h1>
+
+  <div class="gift-card-section">
+    <h2>{{ 'admin.gift-card-management' | translate }}</h2>
+
+    <!-- Create Gift Card Form -->
+    <div class="create-form">
+      <h3>{{ 'admin.create-new' | translate }}</h3>
+      <div class="form-group">
+        <label for="value">{{ 'admin.value' | translate }}:</label>
+        <input type="number" id="value" [(ngModel)]="newGiftCard.value" min="1" required>
+      </div>
+      <div class="form-group">
+        <label for="category">{{ 'admin.category' | translate }}:</label>
+        <select id="category" [(ngModel)]="newGiftCard.categoryId">
+          <option [ngValue]="null">{{ 'admin.select-category' | translate }}</option>
+          <option *ngFor="let category of categories" [ngValue]="category.id">{{ category.name }}</option>
+        </select>
+      </div>
+      <button (click)="createGiftCard()">{{ 'admin.create-button' | translate }}</button>
+    </div>
+
+    <!-- Gift Card List -->
+    <div class="gift-card-list">
+      <h3>{{ 'admin.gift-cards' | translate }}</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>{{ 'admin.id' | translate }}</th>
+            <th>{{ 'admin.code' | translate }}</th>
+            <th>{{ 'admin.value-column' | translate }}</th>
+            <th>{{ 'admin.used' | translate }}</th>
+            <th>{{ 'admin.actions' | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let giftCard of giftCards">
+            <!-- View Mode -->
+            <tr *ngIf="editingGiftCard?.id !== giftCard.id">
+              <td>{{ giftCard.id }}</td>
+              <td>{{ giftCard.code }}</td>
+              <td>{{ giftCard.value }}</td>
+              <td>{{ giftCard.used ? ('admin.yes' | translate) : ('admin.no' | translate) }}</td>
+              <td>
+                <button (click)="startEditing(giftCard)">{{ 'admin.edit' | translate }}</button>
+                <button (click)="giftCard.id !== undefined && deleteGiftCard(giftCard.id)">{{ 'admin.delete' | translate }}</button>
+              </td>
+            </tr>
+
+            <!-- Edit Mode -->
+            <tr *ngIf="editingGiftCard?.id === giftCard.id">
+              <td>{{ giftCard.id }}</td>
+              <td>{{ giftCard.code }}</td>
+              <td>
+                <input type="number" *ngIf="editingGiftCard" [(ngModel)]="editingGiftCard.value" min="1" required>
+              </td>
+              <td>
+                <select *ngIf="editingGiftCard" [(ngModel)]="editingGiftCard.used">
+                  <option [ngValue]="false">{{ 'admin.no' | translate }}</option>
+                  <option [ngValue]="true">{{ 'admin.yes' | translate }}</option>
+                </select>
+              </td>
+              <td>
+                <div>
+                  <select *ngIf="editingGiftCard" [(ngModel)]="editingGiftCard.categoryId">
+                    <option [ngValue]="null">{{ 'admin.select-category' | translate }}</option>
+                    <option *ngFor="let category of categories" [ngValue]="category.id">{{ category.name }}</option>
+                  </select>
+                </div>
+                <button (click)="updateGiftCard()">{{ 'admin.save' | translate }}</button>
+                <button (click)="cancelEditing()">{{ 'admin.cancel' | translate }}</button>
+              </td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+
+      <div *ngIf="giftCards.length === 0" class="no-data">
+        {{ 'admin.no-gift-cards' | translate }}
+      </div>
+    </div>
+  </div>
+</div>

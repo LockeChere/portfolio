@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landbouw Minigame — Ontwerp · Carolina Sauselé</title>
+  <meta name="description" content="Figma-ontwerp van een pixel-art landbouw minigame over duurzaam boeren: bodemkwaliteit, biodiversiteit en pestdruk in zes beurten.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0f; --surface: #111118; --surface2: #1a1a24;
+      --border: rgba(255,255,255,0.07); --accent: #7c6bff; --accent2: #c084fc;
+      --text: #e8e8f0; --muted: #8a8ab5; --white: #fff;
+      --font-display: 'Syne', sans-serif; --font-body: 'DM Sans', sans-serif;
+      --radius: 12px; --radius-lg: 20px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.65; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; color: var(--white); }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    nav { position: sticky; top: 0; z-index: 10; background: rgba(10,10,15,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
+    .logo { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: var(--white); }
+    .logo span { color: var(--accent); }
+    .back { font-size: 0.9rem; color: var(--muted); display: inline-flex; gap: 8px; align-items: center; transition: color .2s; }
+    .back:hover { color: var(--white); }
+
+    header.hero { padding: 72px 0 40px; position: relative; overflow: hidden; }
+    .glow { position: absolute; width: 520px; height: 520px; border-radius: 50%; filter: blur(120px); opacity: .18; pointer-events: none; }
+    .glow-1 { background: var(--accent); top: -200px; right: -120px; }
+    .glow-2 { background: #22c55e; bottom: -300px; left: -200px; opacity: .1; }
+    .label { font-family: var(--font-display); font-size: .75rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 12px; }
+    .hero h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 800; margin-bottom: 20px; }
+    .grad { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .lead { max-width: 720px; font-size: 1.1rem; color: var(--text); opacity: .9; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .tag { background: rgba(124,107,255,.12); border: 1px solid rgba(124,107,255,.3); color: var(--accent2); font-size: .75rem; font-weight: 500; padding: 4px 12px; border-radius: 100px; }
+
+    .cover { margin-top: 40px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); box-shadow: 0 30px 80px rgba(0,0,0,.5); cursor: zoom-in; display: block; width: 100%; background: none; }
+    .cover img { display: block; width: 100%; height: auto; image-rendering: pixelated; }
+
+    .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 48px 0 0; }
+    .fact { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
+    .fact b { display: block; font-family: var(--font-display); font-size: 1.6rem; color: var(--white); }
+    .fact span { color: var(--muted); font-size: .9rem; }
+
+    section { padding: 64px 0 16px; }
+    section h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; margin-bottom: 8px; }
+    .step { font-family: var(--font-display); color: var(--accent); font-size: .85rem; font-weight: 700; letter-spacing: .1em; }
+    .intro { color: var(--muted); max-width: 720px; margin-bottom: 28px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    figure { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: border-color .3s, transform .3s; }
+    figure:hover { border-color: rgba(124,107,255,.35); transform: translateY(-3px); }
+    figure button { all: unset; display: block; cursor: zoom-in; width: 100%; }
+    figure button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+    figure img { display: block; width: 100%; aspect-ratio: 1440 / 1040; object-fit: cover; image-rendering: pixelated; background: var(--surface2); }
+    figcaption { padding: 14px 18px 18px; }
+    figcaption strong { display: block; color: var(--white); font-weight: 500; }
+    figcaption span { color: var(--muted); font-size: .88rem; }
+
+    .closing { margin: 64px 0 40px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; }
+    .closing p { color: var(--text); opacity: .9; max-width: 760px; }
+    .closing .actions { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: 12px 22px; border-radius: 100px; font-weight: 500; font-size: .95rem; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; }
+    .btn-ghost { border: 1px solid var(--border); color: var(--text); }
+    .btn-ghost:hover { border-color: var(--accent); }
+    footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: center; color: var(--muted); font-size: .85rem; }
+
+    /* Lightbox */
+    .lb { position: fixed; inset: 0; background: rgba(5,5,10,.97); display: none; z-index: 100; align-items: center; justify-content: center; flex-direction: column; padding: 16px; }
+    .lb.open { display: flex; }
+    .lb img { max-width: min(1440px, 100%); max-height: calc(100vh - 120px); border-radius: 10px; image-rendering: pixelated; box-shadow: 0 20px 60px rgba(0,0,0,.6); }
+    .lb-cap { margin-top: 14px; text-align: center; color: var(--text); max-width: 800px; }
+    .lb-cap small { color: var(--muted); display: block; }
+    .lb-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,.08); border: 1px solid var(--border); color: #fff; width: 48px; height: 48px; border-radius: 50%; font-size: 1.4rem; cursor: pointer; }
+    .lb-btn:hover { background: rgba(124,107,255,.35); }
+    .lb-prev { left: 16px; } .lb-next { right: 16px; }
+    .lb-close { position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,.08); border: 1px solid var(--border); color: #fff; width: 44px; height: 44px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; }
+    @media (max-width: 640px) {
+      .lb-btn { top: auto; bottom: 16px; transform: none; }
+      .grid { grid-template-columns: 1fr; }
+      header.hero { padding-top: 48px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a class="logo" href="../../">CS<span>.</span></a>
+      <a class="back" href="../../#projecten">← Terug naar projecten</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="glow glow-1"></div><div class="glow glow-2"></div>
+    <div class="container">
+      <span class="label">Ontwerp · Figma</span>
+      <h1>Landbouw <span class="grad">Minigame</span></h1>
+      <p class="lead">
+        Een pixel-art minigame waarin je als boer zes beurten lang je eigen bedrijf runt. Bij elke keuze
+        die je maakt, zoals wat je zaait, hoe je je percelen omheint en hoe je plagen bestrijdt, zie je meteen
+        wat dat doet met je geld, de bodemkwaliteit en de biodiversiteit. Hieronder staat het volledige
+        schermontwerp, van het startscherm tot de eindstatistieken.
+      </p>
+      <div class="tags">
+        <span class="tag">Figma</span><span class="tag">UI/UX-ontwerp</span><span class="tag">Game design</span><span class="tag">Pixel art</span><span class="tag">Duurzaamheid</span>
+      </div>
+      <button class="cover" data-src="img/beginspel.webp" data-title="Het speelveld" data-desc="De boerderij met zes percelen, het pad en de HUD met beurt, geld, biodiversiteit en bodemkwaliteit.">
+        <img src="img/beginspel.webp" alt="Speelveld van de landbouw minigame met boerderij en zes percelen" width="1440" height="1040">
+      </button>
+      <div class="facts">
+        <div class="fact"><b>6</b><span>beurten om je boerderij te beheren</span></div>
+        <div class="fact"><b>2</b><span>acties per beurt</span></div>
+        <div class="fact"><b>3</b><span>soorten acties: zaaien, omheinen en beheren</span></div>
+        <div class="fact"><b>21</b><span>uitgewerkte schermen</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="gallery"></main>
+
+  <div class="container">
+    <div class="closing">
+      <h2 style="margin-bottom:12px">Het idee erachter</h2>
+      <p>
+        De speler moet steeds een afweging maken. Monocultuur levert meer op maar kost biodiversiteit,
+        chemisch bestrijden werkt snel maar laat een grotere impact achter, en een haag of singel kost geld
+        maar maakt je percelen sterker tegen plagen. Doordat de effecten direct op de knoppen staan en de
+        balken bovenin meebewegen, zie je meteen wat een keuze doet. Willekeurige gebeurtenissen zoals
+        droogte zorgen ervoor dat geen enkel spel hetzelfde loopt.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="../../#projecten">Bekijk mijn andere projecten</a>
+        <a class="btn btn-ghost" href="../../#contact">Neem contact op</a>
+      </div>
+    </div>
+  </div>
+
+  <footer><div class="container">© Carolina Sauselé · Ontwerp gemaakt in Figma</div></footer>
+
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Afbeelding vergroot">
+    <button class="lb-close" aria-label="Sluiten">✕</button>
+    <button class="lb-btn lb-prev" aria-label="Vorige">‹</button>
+    <img alt="">
+    <div class="lb-cap"><strong></strong><small></small></div>
+    <button class="lb-btn lb-next" aria-label="Volgende">›</button>
+  </div>
+
+  <script>
+    var FLOW = [
+      { step: '01', title: 'Start en uitleg', intro: 'De speler kiest eerst een bedrijfstype en krijgt daarna uitleg over de besturing en de spelregels.', items: [
+        ['begin-scherm-geen-keuze', 'Kies je bedrijfstype', 'Akkerbouw of veeteelt, elk met hun eigen aandachtspunten.'],
+        ['begin-scherm', 'Keuze gemaakt', 'Na het kiezen verschijnt een vinkje en start je met Enter.'],
+        ['tutorial', 'Tutorial', 'Korte hints in het spel zelf laten zien waar je op E drukt.'],
+        ['handleiding', 'Handleiding', 'Besturing (WASD en E) en de spelregels op één scherm.']
+      ]},
+      { step: '02', title: 'Rondlopen op de boerderij', intro: 'Je loopt met je karakter over het erf. Sta je bij een perceel, dan open je met E het actiemenu.', items: [
+        ['beginspel', 'Het speelveld', 'Boerderij, zes percelen en de HUD met beurt, geld en de balken voor biodiversiteit en bodemkwaliteit.'],
+        ['karakter-bij-perceel', 'Bij een perceel', 'Een E-hint laat zien dat je hier iets kunt doen.'],
+        ['actiemenu', 'Actiemenu', 'Per perceel kies je tussen zaaien, omheining plaatsen of beheren.']
+      ]},
+      { step: '03', title: 'Acties en hun effect', intro: 'Elke actie laat vooraf zien wat hij doet met de opbrengst, de pestdruk, de biodiversiteit en de bodem, en wat hij kost.', items: [
+        ['zaaien-menu', 'Zaaien', 'Monocultuur tegenover polycultuur, met de voor- en nadelen direct zichtbaar.'],
+        ['mono-gezaaid', 'Monocultuur gezaaid', 'Het perceel na het zaaien van één gewas.'],
+        ['poly-gezaaid', 'Polycultuur gezaaid', 'Gemengde gewassen op het perceel.'],
+        ['omheining-menu', 'Omheining plaatsen', 'Kies tussen een haag, een singel of geen omheining.'],
+        ['haag', 'Haag geplaatst', 'Percelen met een haag eromheen.'],
+        ['singel', 'Singel geplaatst', 'Percelen met een houtsingel.'],
+        ['beheren-menu', 'Beheren', 'Pestbestrijding (chemisch, IPM of natuurlijk) en bodembeheer (compost of rotatiegewas).']
+      ]},
+      { step: '04', title: 'Beurten en gebeurtenissen', intro: 'Na twee acties loop je terug naar de boerderij om je beurt af te sluiten. Tussendoor kan er van alles gebeuren.', items: [
+        ['beurt-beindigen', 'Terug naar de boerderij', 'Bij het huis druk je op E om de beurt te beëindigen.'],
+        ['beurt-beindigen-keuze', 'Beurt beëindigen?', 'Een bevestiging voorkomt dat je per ongeluk doorklikt.'],
+        ['beurt-2-met-waarschuwing', 'Gebeurtenis: droogte!', 'Aan het begin van een beurt kan een willekeurige gebeurtenis optreden.'],
+        ['beurt-2-met-waarschuwing-in-spel', 'Waarschuwing in beeld', 'De actieve gebeurtenis blijft rechtsonder zichtbaar terwijl je speelt.'],
+        ['beurt-beindigen-2', 'Beurt 2 afronden', 'Ook tijdens een gebeurtenis sluit je de beurt af bij de boerderij.'],
+        ['beurt-beindigen-3', 'Bevestigen tijdens droogte', 'Dezelfde bevestiging, nu met de droogte nog actief.']
+      ]},
+      { step: '05', title: 'Resultaat', intro: 'Na zes beurten zie je hoe je boerderij ervoor staat en wat er per beurt is gebeurd.', items: [
+        ['result-screen', 'Eindstatistieken', 'Geld, bodemkwaliteit, biodiversiteit en pestdruk ten opzichte van de start, plus een totale impactscore en een overzicht van alle gebeurtenissen.']
+      ]}
+    ];
+
+    var gallery = document.getElementById('gallery');
+    var all = [];
+    FLOW.forEach(function (sec) {
+      var s = document.createElement('section');
+      s.innerHTML = '<span class="step">STAP ' + sec.step + '</span><h2>' + sec.title + '</h2><p class="intro">' + sec.intro + '</p><div class="grid"></div>';
+      var grid = s.querySelector('.grid');
+      sec.items.forEach(function (it) {
+        var idx = all.length;
+        all.push({ src: 'img/' + it[0] + '.webp', title: it[1], desc: it[2] });
+        var f = document.createElement('figure');
+        f.innerHTML = '<button type="button" aria-label="Vergroot: ' + it[1] + '"><img loading="lazy" src="img/' + it[0] + '-thumb.webp" alt="' + it[1] + '" width="720" height="520"></button>' +
+          '<figcaption><strong>' + it[1] + '</strong><span>' + it[2] + '</span></figcaption>';
+        f.querySelector('button').addEventListener('click', function () { open(idx); });
+        grid.appendChild(f);
+      });
+      gallery.appendChild(s);
+    });
+
+    var lb = document.getElementById('lb'), img = lb.querySelector('img'),
+        capT = lb.querySelector('.lb-cap strong'), capD = lb.querySelector('.lb-cap small'), cur = 0, lastFocus = null;
+    function show(i) {
+      cur = (i + all.length) % all.length;
+      img.src = all[cur].src; img.alt = all[cur].title;
+      capT.textContent = all[cur].title + '  (' + (cur + 1) + '/' + all.length + ')';
+      capD.textContent = all[cur].desc;
+    }
+    function open(i) { lastFocus = document.activeElement; show(i); lb.classList.add('open'); document.body.style.overflow = 'hidden'; lb.querySelector('.lb-close').focus(); }
+    function close() { lb.classList.remove('open'); document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); }
+    lb.querySelector('.lb-close').onclick = close;
+    lb.querySelector('.lb-prev').onclick = function () { show(cur - 1); };
+    lb.querySelector('.lb-next').onclick = function () { show(cur + 1); };
+    lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') close();
+      if (e.key === 'ArrowLeft') show(cur - 1);
+      if (e.key === 'ArrowRight') show(cur + 1);
+    });
+    document.querySelector('.cover').addEventListener('click', function () {
+      open(all.findIndex(function (a) { return a.src === 'img/beginspel.webp'; }));
+    });
+  </script>
+</body>
+</html>

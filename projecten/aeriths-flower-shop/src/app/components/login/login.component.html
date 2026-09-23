@@ -1,0 +1,31 @@
+<body><main class="container mt-5">
+  <section class="row justify-content-center">
+    <article class="col-md-6">
+      <section class="card">
+        <header class="card-header">
+          {{ "login" | translate }}
+        </header>
+        <section class="card-body">
+          <form (ngSubmit)="login()">
+            <section class="form-group">
+              <label for="username">{{ "email" | translate }}</label>
+              <input type="text" class="form-control" id="username" [(ngModel)]="credentials.email" name="username">
+            </section>
+            <section class="form-group">
+              <label for="password">{{ "password" | translate }}</label>
+              <input type="password" class="form-control" id="password" [(ngModel)]="credentials.password" name="password">
+            </section>
+            <button type="submit" class="btn btn-primary">{{ "confirm" | translate }}</button>
+          </form>
+
+          <section class="register-option">
+            <p>{{ "no_account" | translate }} 
+              <a routerLink="/register">{{ "register" | translate }}</a> 
+              <a routerLink="#">{{ "admin" | translate }}</a>
+            </p>
+          </section>
+        </section>
+      </section>
+    </article>
+  </section>
+</main></body>

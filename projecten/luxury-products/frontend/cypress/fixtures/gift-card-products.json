@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": 10,
+      "name": "Gift Card €50",
+      "description": "Gift cards with a value of €50",
+      "price": 50.00,
+      "stock": 10,
+      "category": "Gift Cards",
+      "imageUrl": "assets/images/gift-card.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Gift Card €100",
+      "description": "Gift card with a value of €100",
+      "price": 100.00,
+      "stock": 10,
+      "category": "Gift Cards",
+      "imageUrl": "assets/images/gift-card.jpg"
+    }
+  ]
+}

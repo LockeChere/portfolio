@@ -1,0 +1,26 @@
+<section class="detail-section">
+
+  
+    <div class="container-fluid">
+      <figure *ngIf="product && product.imgUrl">
+        <img [src]="product.imgUrl | productImg" class="detail-img" alt="{{ product.name }}">
+        <figcaption>{{ product.name }}</figcaption>
+      </figure>
+  
+      <h3>{{ product.name }}</h3>
+      <div class="price">{{ product.price | currency: 'EUR' }}</div>
+      <button (click)="addToCart()" class="bts bts-primary btn-sm">{{ 'ATC' | translate }}</button>
+      
+      <div *ngIf="isAdmin">
+        <button (click)="editProduct()" class="bts bts-secondary btn-sm">{{ 'EDIT_PRO' | translate }}</button>
+        <button (click)="deleteProduct()" class="bts bts-danger btn-sm">{{ 'DELETE_PRO' | translate }}</button>
+      </div>
+
+      <hr>
+      <h4>{{ "DESCR" | translate }}</h4>
+      <p>{{ product.description }}</p>
+  
+      <a routerLink="/products" class="mt-5">{{ 'BPL' | translate }}</a>
+    </div>
+  </section>
+  

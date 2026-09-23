@@ -1,0 +1,65 @@
+$primary-color: #ff74a0;
+
+.bts {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-transform: uppercase;
+  
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  
+    &:active {
+      background-color: darken($primary-color, 15%);
+    }
+  
+    &.btn-sm {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+    &.bts-secondary{
+      background-color: darken($primary-color, 15%);
+    }
+  }
+  
+  /* Specifieke knoppen */
+  .bts-primary {
+    background-color: #ff6dac;
+    color: white;
+  
+    &:hover {
+      background-color: #63ff5b;
+    }
+  
+    &:active {
+      background-color: #854040;
+    }
+  }
+  
+  .bts-danger {
+    background-color: #c82e2e;
+    color: white;
+  
+    &:hover {
+      background-color: #c82323;
+    }
+  
+    &:active {
+      background-color: #bd2130;
+    }
+  }
+  
+  /* Specifieke styling voor de knoppen in de ProductDetailsComponent */
+  .detail-section .bts {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  

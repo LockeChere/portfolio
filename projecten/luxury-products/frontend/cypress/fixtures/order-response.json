@@ -1,0 +1,27 @@
+{
+  "order": {
+    "id": 1,
+    "user": {
+      "id": 2,
+      "email": "user@test.com"
+    },
+    "orderItems": [
+      {
+        "productId": 1,
+        "productName": "Rolex Submariner",
+        "quantity": 1,
+        "price": 7999.99
+      }
+    ],
+    "shippingAddress": "Test Street 123 Test City 1234 AB",
+    "totalPrice": 7999.99,
+    "orderDate": "2024-03-20T12:00:00.000Z",
+    "status": "PENDING"
+  },
+  "returnResponse": {
+    "id": 1,
+    "orderId": 1,
+    "returnStatus": "PENDING",
+    "message": "Return request submitted successfully"
+  }
+} 

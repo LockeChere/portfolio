@@ -1,0 +1,39 @@
+<section class="edit-section">
+    <article class="container">
+      <header>
+        <h3>Edit Product</h3>
+      </header>
+  
+      <form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+        <fieldset>
+          <label for="name">{{ 'NAME' | translate }}</label>
+          <input id="name" formControlName="name" class="form-control" required />
+          <p *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched" class="error">
+            Naam is verplicht.
+          </p>
+        </fieldset>
+  
+        <fieldset>
+          <label for="description">{{ 'DESCR' | translate }}</label>
+          <textarea id="description" formControlName="transDescription" class="form-control" required></textarea>
+          <p *ngIf="productForm.get('transDescription')?.invalid && productForm.get('transDescription')?.touched" class="error">
+            Beschrijving is verplicht.
+          </p>
+        </fieldset>
+  
+        <fieldset>
+          <label for="price">{{ 'PRICE' | translate }}</label>
+          <input id="price" formControlName="price" class="form-control" type="number" required />
+          <p *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched" class="error">
+            Prijs is verplicht en moet groter zijn dan 0.
+          </p>
+        </fieldset>
+  
+        <section>
+          <button type="submit" [disabled]="productForm.invalid" class="bts bts-primary">{{ 'SAVE' | translate }}</button>
+          <button type="button" (click)="cancel()" class="bts bts-danger">{{ 'CANCEL' | translate }}</button>
+        </section>
+      </form>
+    </article>
+  </section>
+  

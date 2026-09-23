@@ -1,0 +1,21 @@
+.accessibility-controls {
+    display: flex;
+    gap: 10px;
+    
+    button {
+      font-size: 16px;
+      font-family: 'Star Jedi', sans-serif;
+      padding: 5px 10px;
+      cursor: pointer;
+      border: none;
+      background-color: #ffee04;
+      color: rgb(0, 0, 0);
+      border-radius: 5px;
+      
+      &:hover {
+        background-color: #ffff20;
+      }
+      cursor: url('../../../assets/images/spaceship-cursor.png') 16 16, pointer;
+    }
+  }
+  

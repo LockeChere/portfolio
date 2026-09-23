@@ -1,0 +1,69 @@
+/* Container voor de reserveringen */
+.reservations {
+    width: 100%;
+    max-width: 700px;
+    padding: 2rem;
+    border: 2px solid #00bfff;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5); /* Donkere achtergrond voor ruimte-thema */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin: 2rem auto; /* Centraal uitlijnen */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  /* Titel van de reserveringen sectie */
+  .title {
+    font-family: 'Star Jedi', sans-serif;
+    font-size: 2.5rem;
+    color: #caf0f8;
+    margin-bottom: 2rem;
+  }
+  
+  /* Stijl voor de reserveringen tekst */
+  .reservation-item {
+    font-size: 1.3rem;
+    margin: 0.8rem 0;
+    color: #eeeeee;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Knoppen voor verwijderen van reserveringen */
+  .delete-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #00b4d8;
+    background-color: #ff4040; /* Rood voor de delete knop */
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    margin-top: 0.5rem;
+  
+    /* Hover effect voor de delete knop */
+    &:hover {
+      background-color: #ff1f1f;
+      color: #ffffff;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    }
+  
+    /* Focus effect voor toegankelijkheid */
+    &:focus {
+      outline: none;
+      border-color: #ffadb5;
+      box-shadow: 0 0 10px #ffadb5;
+    }
+  
+    /* Kleine schaduw voor meer diepte */
+    &:active {
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    }
+  }
+  

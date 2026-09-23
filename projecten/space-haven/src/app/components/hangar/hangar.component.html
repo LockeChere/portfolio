@@ -1,0 +1,52 @@
+<main class="hangar-wrapper">
+  <section class="circle-container">
+    <div class="level-buttons">
+      <button class="lvl-btn1" (click)="switchLevel(1)" [class.active]="currentLevel === 1">{{ 'HANGAR.LEVEL1' | translate}}</button>
+      <button class="lvl-btn2" (click)="switchLevel(2)" [class.active]="currentLevel === 2">{{ 'HANGAR.LEVEL2' | translate}}</button>
+    </div>
+    <div class="inner-circle-bg"></div>
+    <div class="inner-circle"></div>
+    @for (dock of filteredDocks; track dock.id) {
+      <button
+        class="dock-button"
+        [class.S]="dock.size === 'SMALL'"
+        [class.M]="dock.size === 'MEDIUM'"
+        [class.L]="dock.size === 'LARGE'"
+        [ngStyle]="getItemStyle(dock.id, filteredDocks.length)"
+        [class.maintenance]="dock.maintenance === true"
+        (click)="reserveDock(dock.id)"
+        [disabled]="dock.maintenance === true || dock.dangerous">
+        {{dock.id}}
+        {{dock.size}}
+        {{ ('HANGAR.' + dock.maintenance.toString()) | translate }}
+        {{dock.currentReservation != null ? "Gereserveerd" : ""}}
+        @if (dock.dangerous){
+          Dangerous!
+        }
+      </button>
+    }
+  </section>
+
+  <section *ngIf="showReservationDetails" class="reservation-details">
+    <h2>{{ 'HANGAR.RESERVATION_DETAILS' | translate }}</h2>
+    <p>
+      {{ 'HANGAR.END_TIME' | translate }}:
+      {{ selectedReservation?.endTime }}
+    </p>
+    <div *ngIf="this.authService.isAdmin" class="admin">
+      <p>Ship id: {{ selectedReservation?.shipId }}</p>
+    </div>
+    <button class="close-btn" (click)="closeDetails()">
+      X
+    </button>
+    <button class="reserve-btn" (click)="reserveDockPopUp()">
+      +
+    </button>
+  </section>
+
+  <section class="bonus-counter">
+    <div class="counter-display">
+      {{  'HANGAR.BONUS' | translate }}: {{ points }}
+    </div>
+  </section>
+</main>

@@ -1,0 +1,27 @@
+<section *ngIf="activeReservations.length > 0">
+    <h2 class="section-title">{{ 'ACCOUNT.RESERVATIONS' | translate }}</h2>
+    <p class="section-subtitle">{{ 'ACCOUNT.ACTIVERESERVE' | translate }}</p>
+  
+    <div *ngFor="let res of activeReservations" class="reservation-card">
+      <p><strong>Ship ID:</strong> {{ res.ship?.id }}</p>
+      <p><strong>Dock ID:</strong> {{ res.dock?.id }}</p>
+      <p><strong>{{ 'RESERVATION.END' | translate }}:</strong> {{ res.endTime | date:'short' }}</p>
+    </div>
+  </section>
+  
+  <hr *ngIf="activeReservations.length > 0 && pastReservations.length > 0" class="divider" />
+  
+  <section *ngIf="pastReservations.length > 0">
+    <p class="section-subtitle">{{ 'ACCOUNT.HISTORY' | translate }}</p>
+  
+    <div *ngFor="let res of pastReservations" class="reservation-card">
+      <p><strong>Ship ID:</strong> {{ res.ship?.id }}</p>
+      <p><strong>Dock ID:</strong> {{ res.dock?.id }}</p>
+      <p><strong>Eindtijd:</strong> {{ res.endTime | date:'short' }}</p>
+    </div>
+  </section>
+  
+  <ng-template #noReservations>
+    <p>{{ 'ACCOUNT.NORESERVATIONS' | translate }}</p>
+  </ng-template>
+  

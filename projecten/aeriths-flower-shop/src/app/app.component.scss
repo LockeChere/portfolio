@@ -1,0 +1,70 @@
+// Algemene knopstijl
+.btn-login {
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;  // Ronde hoeken voor een moderne uitstraling
+    background-color: #e772a5;  // Groene achtergrond
+    color: #fff;  // Witte tekstkleur
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  
+    // Hover effect
+    &:hover {
+      background-color: #45a049;  // Donkerder groen bij hover
+      transform: translateY(-5px);  // Licht omhoog bewegen bij hover
+    }
+  
+    // Focus effect voor toetsenbordnavigatie
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(72, 177, 73, 0.5);  // Schaduw rond de knop
+    }
+  
+    // Actieve staat (wanneer de knop wordt ingedrukt)
+    &:active {
+      background-color: #388e3c;  // Donkerder groen wanneer ingedrukt
+      transform: translateY(0);  // Terug naar de oorspronkelijke positie
+    }
+  }
+  
+  // Optionele secundaire knopstijl (bijvoorbeeld voor 'registreren' of andere acties)
+.btn-optional {
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #4CAF50;  // Groene rand
+    border-radius: 30px;
+    background-color: transparent;  // Transparante achtergrond
+    color: #151915;  // Groene tekstkleur
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  
+    // Hover effect
+    &:hover {
+      background-color: #4CAF50;  // Groene achtergrond bij hover
+      color: #fff;  // Witte tekstkleur bij hover
+      transform: translateY(-5px);
+    }
+  
+    // Focus effect voor toetsenbordnavigatie
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(72, 177, 73, 0.5);
+    }
+  
+    // Actieve staat
+    &:active {
+      background-color: #388e3c;
+      color: #fff;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,302 @@
+{
+  "user": {
+    "info": "Jouw account"
+  },
+  "cart": {
+    "title": "Winkelwagen",
+    "amount": "Aantal: ",
+    "total": "Totaal: €",
+    "del": "Verwijderen",
+    "empty": "Winkelwagen legen",
+    "checkout": "Afrekenen",
+    "noCart": "Je winkelwagen is leeg.",
+    "warning": "Zorg ervoor dat je een account aanmaakt om je winkelwagen op te slaan.",
+    "giftCard": "Cadeaukaart",
+    "enterGiftCard": "Voer code in",
+    "applyGiftCard": "Toepassen",
+    "giftCardApplied": "Cadeaukaart toegepast",
+    "removeGiftCard": "Verwijder code",
+    "giftCardUsed": "Cadeaukaart gebruikt",
+    "giftCardRemaining": "Cadeaukaart resterend",
+    "promoCode": "Promotiecode",
+    "enterPromoCode": "Voer promotiecode in",
+    "applyPromoCode": "Toepassen",
+    "promoCodeApplied": "Promotiecode toegepast",
+    "removePromoCode": "Verwijder promotiecode",
+    "promoDiscount": "Promotiekorting"
+  },
+  "product": {
+    "buy": "Kopen",
+    "price": "Prijs: €",
+    "add": "Toevoegen aan winkelwagen",
+    "loading": "Product wordt geladen...",
+    "stock": "Voorraad: ",
+    "out-of-stock": "Product niet op voorraad",
+    "low-stock": "Laag op voorraad",
+    "in-stock": "Op voorraad",
+    "unavailable": "Niet beschikbaar"
+  },
+  "orders": {
+    "copy-success": "Code gekopieerd!",
+    "title": "Plaats je bestelling",
+    "address": "Verzendadres:",
+    "place": "Plaats bestelling",
+    "view": "Bekijk mijn bestellingen",
+    "your-orders": "Jouw bestellingen",
+    "order": "Bestelling #",
+    "total": "Totaal: €",
+    "no-user": "Je bent niet ingelogd",
+    "login": "Inloggen",
+    "register": "Registreren",
+    "return": "Bestelling Retourneren",
+    "return-form": {
+      "title": "Retourformulier",
+      "reason-placeholder": "Selecteer een retourreden",
+      "additional-info": "Extra informatie voor retour",
+      "additional-info-placeholder": "Voer hier eventuele extra informatie in over uw retour",
+      "photo-upload": "Upload foto van schade",
+      "photo-help": "Upload een duidelijke foto van de schade of het defect. Maximaal 5MB. Toegestane formaten: JPG, PNG, GIF",
+      "submit": "Retour aanvragen",
+      "errors": {
+        "not-an-image": "Selecteer een afbeeldingsbestand",
+        "file-too-large": "Bestandsgrootte mag niet groter zijn dan 5MB",
+        "submission-failed": "Retour aanvraag kon niet worden ingediend",
+        "not-authorized": "U bent niet gemachtigd om deze bestelling te retourneren",
+        "order-not-found": "Bestelling niet gevonden",
+        "session-expired": "Uw sessie is verlopen. Log opnieuw in",
+        "not-eligible": "Deze bestelling komt niet in aanmerking voor retour (moet binnen 30 dagen na aankoop zijn)",
+        "invalid-request": "Ongeldige retour aanvraag. Controleer uw invoer",
+        "reason-required": "Geef een reden op voor de retour",
+        "reason-too-short": "Retourreden moet minimaal 10 tekens lang zijn"
+      },
+      "reasons": {
+        "wrong_size": "Verkeerde maat",
+        "damaged_or_defective": "Product beschadigd of defect",
+        "not_satisfied": "Ik vind het product niet leuk",
+        "differs_from_description": "Product wijkt af van omschrijving",
+        "wrong_delivery": "Verkeerde levering",
+        "wrong_color": "Verkeerde kleur",
+        "damaged_packaging": "Beschadigde verpakking",
+        "not_home_pickup": "Niet thuis tijdens afhalen"
+      }
+    },
+    "return-error": "Retourreden is verplicht",
+    "return-success": "Retourverzoek succesvol ingediend",
+    "return-status": {
+      "pending": "Retour in behandeling",
+      "approved": "Retour goedgekeurd",
+      "rejected": "Retour afgewezen",
+      "completed": "Retour voltooid"
+    }
+  },
+  "homepage": {
+    "welcome": "Welkom bij Luxury Products",
+    "welcome-p": "Uw bestemming voor voortreffelijke en hoogwaardige luxeartikelen.",
+    "collection": "Ontdek Onze Collectie",
+    "games": "Exclusieve Collecties",
+    "games-p": "Ontdek onze zorgvuldig samengestelde selecties van wereldberoemde ontwerpers.",
+    "consoles": "Tijdloze Elegantie",
+    "consoles-p": "Ervaar het toppunt van vakmanschap en verfijnd design.",
+    "accessories": "Premium Kwaliteit",
+    "accessories-p": "Geniet van producten gemaakt van de beste materialen en met nauwgezette aandacht voor detail."
+  },
+  "header": {
+    "homepage": "Home",
+    "products": "Producten",
+    "cart": "Winkelwagen",
+    "reg": "Registreren",
+    "admin": "Admin Paneel",
+    "user": "Mijn Account",
+    "logout": "Uitloggen",
+    "login": "Inloggen",
+    "send": "Versturen",
+    "cancel": "Annuleren",
+    "reason-of-return": "Reden van retourneren",
+    "close": "Sluiten"
+  },
+  "footer": {
+    "copyright": "© 2025 Luxury Products"
+  },
+  "category": {
+    "selector": "Selecteer categorie: ",
+    "all": "Alle",
+    "watches": "Horloges",
+    "wristbands": "Armbanden",
+    "bags": "Tassen",
+    "glasses": "Brillen"
+  },
+  "auth": {
+    "register": "Registreren",
+    "span-message-email": "Ongeldige e-mail opgegeven",
+    "span-message-password": "Wachtwoord niet veilig genoeg",
+    "register-button": "Registreren",
+    "password": "Wachtwoord",
+    "password_confirm": "Wachtwoord bevestigen",
+    "verification": "Verificatiecode",
+    "new-admin": "Registreer een nieuwe admin",
+    "hasAccount": "Heb je al een account? ",
+    "login-link": "Hier inloggen",
+    "noAccount": "Nog geen account? ",
+    "register-link": "Hier registreren",
+    "login": "Inloggen"
+  },
+  "blog": {
+    "header": "Van taal wisselen",
+    "text": "Dit is een kleine begin test om te zien hoe ik de taal kan veranderen met twee knoppen. :)"
+  },
+  "switch-language": {
+    "switchToNL": "Taal instellen op Nederlands",
+    "switchToEN": "Taal instellen op Engels",
+    "switchToDE": "Taal instellen op Duits"
+  },
+  "language-settings": {
+    "constructor": {
+      "private translate": "TranslateService",
+      "defaultLang": "en",
+      "useLang": "en"
+    }
+  },
+  "order": {
+    "giftcardcode": "Cadeaubon code"
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "manage-products": "Beheer Producten",
+    "manage-orders": "Beheer Bestellingen",
+    "manage-users": "Beheer Gebruikers",
+    "manage-returns": "Retouren beheren",
+    "add-product": "Nieuw Product Toevoegen",
+    "existing-products": "Bestaande Producten",
+    "manage-product-variants": "Beheer Productvarianten",
+    "manage-giftcards": "Beheer Cadeaukaarten",
+    "manage-promocodes": "Beheer Promotiecodes",
+    "promocode": {
+      "back-to-admin": "Terug naar admin overzicht",
+      "manage": "Hier kunt u promotiecodes beheren.",
+      "back": "Terug",
+      "title": "Promotiecodes",
+      "create-button": "Nieuwe promotiecode",
+      "hide-form": "Formulier verbergen",
+      "code": "Code",
+      "limit": "Gebruik limiet",
+      "type": "Korting type",
+      "discount": "Korting",
+      "expiration": "Vervaldatum",
+      "usage": "Gebruik",
+      "last-used": "Laatst gebruikt",
+      "actions": "Acties",
+      "edit": "Bewerken",
+      "delete": "Verwijderen",
+      "edit-title": "Promocode bewerken",
+      "save": "Opslaan",
+      "cancel": "Annuleren",
+      "usage-table-title": "Gebruikte promotiecodes",
+      "user": "Gebruiker",
+      "date": "Datum",
+      "products": "Producten",
+      "create-failed": "Aanmaken van promotiecode mislukt",
+      "update-failed": "Bijwerken van promotiecode mislukt",
+      "delete-failed": "Verwijderen van promotiecode mislukt",
+      "code-too-short": "Code moet minstens 6 tekens lang zijn",
+      "code-duplicate": "Deze code bestaat al",
+      "limit-negative": "Limiet mag niet negatief zijn",
+      "discount-negative": "Korting mag niet negatief zijn"
+    },
+    "giftcard": {
+      "back": "Terug",
+      "tabs": {
+        "purchased": "Aangeschafte Kaarten",
+        "products": "Cadeaukaart Producten"
+      },
+      "purchased": {
+        "title": "Aangeschafte Cadeaukaarten",
+        "id": "ID",
+        "code": "Code",
+        "value": "Waarde",
+        "used": "Gebruikt",
+        "category": "Categorie",
+        "actions": "Acties",
+        "yes": "Ja",
+        "no": "Nee",
+        "edit": "Bewerken",
+        "delete": "Verwijderen",
+        "purchase-date": "Aankoopdatum",
+        "status": "Status",
+        "unused": "Niet gebruikt",
+        "save": "Opslaan",
+        "cancel": "Annuleren"
+      },
+      "products": {
+        "title": "Cadeaukaart Producten",
+        "create-title": "Cadeaukaart Product Aanmaken",
+        "add-new": "Nieuwe Cadeaukaart Toevoegen",
+        "name": "Naam",
+        "description": "Beschrijving",
+        "price": "Prijs",
+        "value-label": "Waarde",
+        "category-label": "Categorie",
+        "image-url-label": "Afbeelding URL",
+        "stock-label": "Voorraad",
+        "create-button": "Cadeaukaart Aanmaken",
+        "actions": "Acties",
+        "edit": "Bewerken",
+        "delete": "Verwijderen",
+        "save": "Opslaan",
+        "cancel": "Annuleren",
+        "id": "ID",
+        "stock": "Voorraad",
+        "category": "Categorie",
+        "no-category": "Geen Categorie"
+      }
+    },
+    "returns": {
+      "manage": "Beheer Retouren",
+      "id": "ID",
+      "user": "Gebruiker",
+      "date": "Datum",
+      "status": "Status",
+      "total": "Totaal",
+      "actions": "Acties",
+      "view-details": "Details bekijken",
+      "approve": "Goedkeuren",
+      "reject": "Afwijzen",
+      "details": "Retourdetails",
+      "photos": "Foto's"
+    },
+    "tabs": {
+      "returns": "Retouren",
+      "products": "Producten",
+      "orders": "Bestellingen",
+      "users": "Gebruikers"
+    },
+    "order": {
+      "id": "Bestelling ID",
+      "user-id": "Gebruiker ID",
+      "date": "Datum",
+      "status": "Status",
+      "total": "Totaal",
+      "actions": "Acties",
+      "view-details": "Details Bekijken",
+      "cancel": "Annuleren",
+      "statuses": {
+        "pending": "In behandeling",
+        "processing": "Wordt verwerkt",
+        "shipped": "Verzonden",
+        "delivered": "Geleverd",
+        "cancelled": "Geannuleerd"
+      }
+    },
+    "user": {
+      "id": "ID",
+      "email": "E-mail",
+      "role": "Rol",
+      "actions": "Acties",
+      "view-details": "Details Bekijken",
+      "delete": "Verwijderen",
+      "roles": {
+        "user": "Gebruiker",
+        "admin": "Administrator"
+      }
+    }
+  }
+}

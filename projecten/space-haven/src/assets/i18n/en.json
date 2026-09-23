@@ -1,0 +1,78 @@
+{
+  "HEADER": {
+    "HOME": "Home",
+    "ACCOUNT": "Account",
+    "LANGUAGE": "Language",
+    "LOGOUT": "Log out"
+  },
+
+  "ACCOUNT": {
+    "EMAIL": "E-mail",
+    "PASSWORD": "Password",
+    "NO_ACCOUNT": "No account? Register here",
+    "ROLE_USER": "User",
+    "ROLE_ADMIN": "Admin",
+    "DETAILBTN": "Details",
+    "SHIPBTN": "Ships",
+    "RESERVATIONBTN": "Reservations",
+    "REGISTERSHIPBTN": "Register your ship",
+    "DETAILS": "Details",
+    "SHIPS": "Ships",
+    "RESERVATIONS": "Reservations",
+    "DETAILSTITLE": "Accountdetails",
+    "ROLE": "Role:",
+    "FACTION": "Faction:",
+    "undefined": "Geen faction",
+    "EDIT": "Edit",
+    "SHIP": "Ship:",
+    "SHIPSIZE": "Ship size:",
+    "SHIPTYPE": "Ship type:",
+    "HISTORY": "History",
+    "NOSHIPS": "No ships found",
+    "NOUSER": "No user found",
+    "VEHICLES": "My Ships",
+    "ACTIVERESERVE": "Active Reservations",
+    "REGISTER": "Register",
+    "LOGIN": "Login"
+  },
+
+  "HANGAR": {
+    "LEVEL": "Level",
+    "true": "On Maintenance",
+    "false": "Operational",
+    "LEVEL1": "Level 1",
+    "LEVEL2": "Level 2",
+    "RESERVATION_DETAILS": "Reservation",
+    "END_TIME": "End time",
+    "BONUS": "CHEWBACCA-POINTS"
+  },
+  "CREATE": {
+    "DANGEROUSWARE": "Contains dangerous goods",
+    "MILITARY": "Military",
+    "NONMIL": "Non-military",
+    "SMALL":"Small",
+    "MEDIUM":"Medium",
+    "LARGE": "Large",
+    "ADDSHIP": "Add Ship",
+    "CANCEL": "Cancel"
+  },
+
+  "RESERVATION": {
+    "SHIP": "Choose Ship",
+    "MAKE": "Make A Reservation",
+    "START": "Start Date",
+    "END":"End Date",
+    "CREATE":"Reserve",
+    "CANCEL": "Cancel"
+  },
+
+  "ADMIN": {
+    "RESERVATION_TITLE": "Reservations",
+    "RESERVATION": "Reservation {{id}}: ends at {{endTime}}",
+    "DASHBOARD": "Admin Dashboard",
+    "MANAGER": "Manage Reservations",
+    "DOCK": "Dock Information"
+  }
+
+
+}

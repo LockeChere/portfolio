@@ -1,0 +1,103 @@
+<div class="page-wrapper">
+  <!-- MENU SIDEBAR-->
+  <aside class="menu-sidebar d-none d-lg-block">
+    <div class="logo">
+      <a routerLink="/products">
+        <img
+          src="assets/img/logo.png"
+          alt="aerithsflowershop"
+          class="img-responsive"
+        />
+      </a>
+    </div>
+    
+   <div class="container text-center mt-5">
+              <button class="btn-login" routerLink="/login">
+                {{ "LOGIN" | translate }}
+              </button>
+            </div>
+            
+            <div class="container text-center mt-5">
+            <button *ngIf="isLoggedIn" (click)="logout()" class="btn-optional">
+              {{ "LOGOUT" | translate }}
+            </button></div>
+        
+            
+
+            <div class="container text-center mt-5">
+              <button *ngIf="authService.isLoggedIn | async" routerLink="/members" class="btn-optional"> {{ "MEMBER" | translate }}</button>
+            </div>
+
+            <div class="container text-center mt-5">
+            <button *ngIf="authService.isLoggedIn | async" class="btn-login" routerLink="/order-history">
+                {{ "ORDERS" | translate }}
+            </button>
+
+            <div *ngIf="authService.isAdmin" class="container text-center mt-5">
+              <button class="btn-optional" routerLink="/admin">
+                Admin Panel
+              </button>
+            </div>
+
+
+
+            
+          </div>
+            
+            
+            
+    <app-product-category-menu></app-product-category-menu>
+    
+  </aside>
+  
+  <!-- END MENU SIDEBAR-->
+
+  <!-- PAGE CONTAINER-->
+  <div class="page-container">
+    <!-- HEADER DESKTOP-->
+    <header class="header-desktop">
+      <div class="section-content section-content-p30">
+        <div class="container-fluid">
+          <div class="header-wrap">
+            
+            <app-search></app-search>
+
+            
+            <app-accessibility></app-accessibility>
+          
+             <!-- Dynamische taalwisselknop -->
+            <button (click)="switchLanguage()" class="btn-optional">
+              {{ currentLang === 'en' ? 'Nederlands' : 'English' }}
+            </button>
+
+            <div class="container text-center mt-5" class="btn-optional">
+              <button class="btn-login-secondary" routerLink="/register">
+                {{ "REGISTER" | translate }}
+              </button>
+            </div>
+
+
+            <app-cart-status></app-cart-status>
+
+          </div>
+          <div class="account-wrap"></div>
+        </div>
+      </div>
+    </header>
+    <!-- END HEADER DESKTOP-->
+
+    <!-- MAIN CONTENT-->
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
+<!--END PAGE CONTAINER -->
+
+<footer>
+  <ul>
+    <li><a href="#">{{ 'ABOUT_US' | translate }}</a></li>
+    <li><a href="#">{{ 'CONTACT_US' | translate }}</a></li>
+    <li><a href="#">{{ 'HELP' | translate }}</a></li>
+  </ul>
+</footer>

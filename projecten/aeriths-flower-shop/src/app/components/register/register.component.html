@@ -1,0 +1,46 @@
+<body><section class="container mt-5">
+  <section class="row justify-content-center">
+    <article class="col-md-6">
+      <section class="card">
+        <header class="card-header">{{ "registration" | translate }}</header>
+        <section class="container">
+          <form (ngSubmit)="register()">
+            <section class="form-group">
+              <label for="email">{{ "email" | translate }}</label>
+              <section class="input-space">
+                <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email">
+                <ng-container
+                  *ngIf="user.email?.invalid && (user.email!.dirty || user.email!.touched)"
+                  class="alert alert-danger mt-1"
+                >
+                  <ng-container
+                    *ngIf="
+                      user.email.errors['required'] ||
+                      user.email.errors['notOnlyWhitespace']
+                    "
+                  >
+                    {{ "email_required" | translate }}
+                  </ng-container>
+                  <ng-container
+                    *ngIf="
+                      user.email.errors['pattern'] ||
+                      user.email.errors['notOnlyWhitespace']
+                    "
+                  >
+                    {{ "email_characters" | translate }}
+                  </ng-container>
+                </ng-container>
+              </section>
+            </section>
+            
+            <section class="form-group">
+              <label for="password">{{ "password" | translate }}</label>
+              <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password">
+            </section>
+            <button type="submit" class="btn btn-primary">{{ "confirm" | translate }}</button>
+          </form>
+        </section>
+      </section>
+    </article>
+  </section>
+</section></body>

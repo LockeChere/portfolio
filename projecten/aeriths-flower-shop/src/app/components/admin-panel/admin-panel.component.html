@@ -1,0 +1,56 @@
+<body class="admin-panel">
+  <h2>Create Product</h2>
+
+  <!-- Formulier voor het toevoegen van een product -->
+  <form *ngIf="!editingProduct" [formGroup]="productForm" (ngSubmit)="addProduct()">
+    <input formControlName="name" placeholder="Product Name" required>
+    <input formControlName="price" type="number" placeholder="Price (€)" required>
+    <input formControlName="imgUrl" placeholder="Image URL">
+    
+    <input formControlName="categoryId" placeholder="Category ID" required> <!-- Voeg categoryId toe -->
+    <textarea formControlName="description" placeholder="Product Description" rows="4" required></textarea> <!-- Voeg description toe -->
+    
+    <label>
+      Available:
+      <input formControlName="available" type="checkbox">
+    </label>
+  
+    <input formControlName="unitsInStock" type="number" placeholder="Units In Stock">
+  
+    <button type="submit">Add Product</button>
+  </form>
+
+  <!-- Formulier voor het bewerken van een product -->
+  <form *ngIf="editingProduct" [formGroup]="productForm" (ngSubmit)="updateProduct()">
+    <input formControlName="name" placeholder="Product Name" required>
+    <input formControlName="price" type="number" placeholder="Price (€)" required>
+    <input formControlName="imgUrl" placeholder="Image-URL">
+  
+    <input formControlName="categoryId" placeholder="Category ID" required> <!-- Voeg categoryId toe -->
+    <textarea formControlName="description" placeholder="Product Description" rows="4" required></textarea> <!-- Voeg description toe -->
+  
+    <label>
+      Available:
+      <input formControlName="available" type="checkbox">
+    </label>
+  
+    <input formControlName="unitsInStock" type="number" placeholder="Units In Stock">
+  
+    <button type="submit">Update Product</button>
+  </form>
+
+  <!-- Lijst van producten -->
+  <ul>
+    <li *ngFor="let product of products">
+      <img [src]="product.imgUrl | productImg" alt="{{ product.name }}" *ngIf="product.imgUrl">
+      <div>
+        <strong>{{ product.name }}</strong> - €{{ product.price }}
+        <p>Units in Stock: {{ product.unitsInStock }}</p>
+        <p>Status: {{ product.available ? 'Available' : 'Not available' }}</p>
+      </div>
+      <!-- Edit knop die de productgegevens voor bewerken instelt -->
+      <button (click)="editProduct(product)">Edit Product</button>
+      <button (click)="deleteProduct(product.id)">Delete Product</button>
+    </li>
+  </ul>
+</body>

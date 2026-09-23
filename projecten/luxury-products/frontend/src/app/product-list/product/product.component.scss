@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import "../../../styles.scss";
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f4f1de;
+  border-radius: 16px;
+  width: 240px;
+  height: 400px;
+  margin: auto;
+  font-family: 'Press Start 2P', cursive;
+  border: 3px solid #3a3a3a;
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  cursor: pointer;
+
+  img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 4px solid #3a3a3a;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #000;
+    max-width: 90%;
+    margin: 0;
+    white-space: normal;
+    overflow: visible;
+    line-height: 1.2;
+    text-overflow: ellipsis;
+  }
+
+  p:first-of-type {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #d62828;
+    text-shadow: 2px 2px 0px #3a3a3a;
+  }
+
+  .product-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #218380;
+  }
+
+  .product-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+
+    .stock-status {
+      font-size: 0.9rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      background-color: #e8f5e9;
+      color: #2e7d32;
+      font-weight: bold;
+      margin: 0;
+
+      &.low-stock {
+        background-color: #fff3e0;
+        color: #ef6c00;
+      }
+
+      &.out-of-stock {
+        background-color: #ffebee;
+        color: #c62828;
+      }
+    }
+
+    button {
+      background: #ffcc00;
+      color: #3a3a3a;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border: 2px solid #3a3a3a;
+      border-radius: 4px;
+      box-shadow: 2px 2px 0px #3a3a3a;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:disabled {
+        background-color: #bdbdbd;
+        cursor: not-allowed;
+        &:hover {
+          background-color: #bdbdbd;
+          transform: none;
+        }
+      }
+
+      &:hover:not(:disabled) {
+        background: #ffaa00;
+        transform: scale(1.05);
+      }
+    }
+  }
+}

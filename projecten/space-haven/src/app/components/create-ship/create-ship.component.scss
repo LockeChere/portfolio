@@ -1,0 +1,122 @@
+/* Algemene stijl voor het formulier */
+form {
+  background-color: #1c1c1c; /* Donkere achtergrond voor een space gevoel */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-family: 'Star Jedi', sans-serif;
+}
+
+
+input[type="text"], input[type="url"], input[type="number"], input[type="checkbox"] {
+  width: 100%;
+  padding: 18px;
+  margin: 15px 0;
+  border: 2px solid #00adb5;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #333; /* Donkere achtergrondkleur voor inputvelden */
+  color: #f0f0f0; /* Lichte tekstkleur voor contrast */
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 50%; /* Maak de checkboxen rond */
+  background-color: #333;
+  border: 2px solid #00adb5;
+}
+
+label {
+  font-size: 18px;
+  color: #f0f0f0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+select {
+  width: 100%;
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 30px;
+  background-color: #333;
+  border: 2px solid #00adb5;
+  color: #f0f0f0;
+  font-size: 18px;
+  font-weight: 500;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+  border-color: #00adb5;
+  box-shadow: 0 0 8px rgba(0, 173, 181, 0.7);
+  outline: none;
+}
+
+button[type="submit"], [type="button"] {
+  background-color: #00adb5;
+  color: white;
+  padding: 18px 24px;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Star Jedi', sans-serif;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+button[type="submit"]:hover {
+  background-color: #009a99;
+}
+
+button[type="submit"]:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+input[formControlName="imgUrl"] {
+  width: 93%;
+  padding: 16px;
+  margin: 12px 0;
+  border-radius: 30px;
+  background-color: #333;
+  border: 2px solid #00adb5;
+  color: #f0f0f0;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Star Jedi', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+input[type="text"]:focus {
+  border-color: #00adb5; /* Ruimteblauwe focusrand */
+  box-shadow: 0 0 8px rgba(0, 173, 181, 0.7);
+  outline: none;
+}
+
+
+input[type="checkbox"] {
+  margin: 0 10px;
+  transform: scale(1.2);
+  margin-left: 15px
+}
+
+.submit-cancel button {
+  display: inline-block;
+  margin-right: 0.5rem;
+  width: 18rem;
+}

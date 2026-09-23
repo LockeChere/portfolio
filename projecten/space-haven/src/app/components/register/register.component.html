@@ -1,0 +1,6 @@
+<form class="register-form" [formGroup]="userFormGroup" (ngSubmit)="register()">
+    <h2 class="form-title">{{ "ACCOUNT.REGISTER" | translate }}</h2>
+    <input placeholder="{{'ACCOUNT.EMAIL' | translate}}" type="text" formControlName="email">
+    <input placeholder="{{'ACCOUNT.PASSWORD' | translate}}" type="password" formControlName="password">
+    <button type="submit">{{ "ACCOUNT.REGISTER" | translate }}</button>
+  </form>

@@ -1,0 +1,33 @@
+.ship-card {
+    background-color: #2e2e2e;
+    border: 1px solid #4d4d4d;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out;
+    color:#ccc;
+  }
+
+
+  .ship-card:hover,
+  .ship-card:focus-within {
+    border-color: #00adb5;
+    box-shadow: 0 0 10px #00adb5;
+    outline: none;
+  }
+
+  .ship-image {
+    max-width: 20rem;
+    max-height: 200px;
+    margin-top: 12px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .section-title {
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #333;
+  }

@@ -1,0 +1,8 @@
+<div class="reservations">
+    <h1 class="title">{{ 'ADMIN.RESERVATION_TITLE' | translate }}</h1>
+    @for (reservation of allReservations; track reservation.id) {
+      <p>{{ 'ADMIN.RESERVATION' | translate:{ id: reservation.id, endTime: reservation.endTime } }}</p>
+      <button class="delete-btn" (click)="deleteReservation(reservation.id!)">X</button>
+    }
+  </div>
+  

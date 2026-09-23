@@ -1,0 +1,15 @@
+<li class="product" (click)="goToProduct(product.id)">
+  <img [src]="product.imageUrl" [alt]="product.name" />
+  <p>{{ product.name }}</p>
+  <p>{{ '€' + product.price }}</p>
+
+  <div class="product-actions">
+    <p class="stock-status" [ngClass]="{'low-stock': product.stock <= 5, 'out-of-stock': product.stock === 0}">
+      {{ stockStatus }}
+    </p>
+    <button (click)="addToCart($event); $event.stopPropagation()"
+            [disabled]="product.stock === 0">
+      {{ product.stock === 0 ? ('product.out-of-stock' | translate) : ('product.buy' | translate) }}
+    </button>
+  </div>
+</li>

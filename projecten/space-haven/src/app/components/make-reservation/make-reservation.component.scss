@@ -1,0 +1,86 @@
+.reservation-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 500px; /* Maximaal formaat van het formulier */
+  margin: 0 auto;
+  margin-top: 30px;
+  color: #ffffff;
+  padding: 2rem;
+  background: linear-gradient(145deg, #1c2b3a, #162230);
+  border-radius: 1rem;
+  box-shadow: 0 0 30px rgba(0, 173, 181, 0.3);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #00adb5;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 1rem;
+}
+
+label {
+  font-size: 1rem;
+  color: #eeeeee;
+}
+
+.input-field,
+.select-field {
+  width: 93%;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid #393e46;
+  background-color: #222831;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  margin-bottom: 7px;
+
+  &:focus {
+    border-color: #00adb5;
+    box-shadow: 0 0 10px #00adb5;
+    outline: none;
+  }
+}
+
+.select-field{
+  width: 98%;
+}
+
+.submit-cancel {
+
+}
+
+.submit-btn, .cancel-btn {
+  width: 14rem;
+  padding: 0.8rem;
+  background-color: #00adb5;
+  border: none;
+  border-radius: 1.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  // &:hover:not(:disabled) {
+  //   background-color: #00cfd1;
+  // }
+
+  // &:disabled {
+  //   background-color: #393e46;
+  //   cursor: not-allowed;
+  // }
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}

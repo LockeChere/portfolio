@@ -1,0 +1,9 @@
+<div class="login-container">
+  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <h2 class="section-title">{{ "ACCOUNT.LOGIN" | translate }}</h2>
+    <input placeholder="{{'ACCOUNT.EMAIL' | translate}}" type="text" required formControlName="email">
+    <input placeholder="{{'ACCOUNT.PASSWORD' | translate}}" type="password" required formControlName="password">
+    <a class="register" routerLink="/register">{{'ACCOUNT.NO_ACCOUNT' | translate}}</a>
+    <button type="submit">{{ "ACCOUNT.LOGIN" | translate }}</button>
+  </form>
+</div>

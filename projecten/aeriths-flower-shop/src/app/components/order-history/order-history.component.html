@@ -1,0 +1,33 @@
+<main class="main-content">
+  <section class="section-content section-content-p30">
+    <section class="container-fluid">
+      <header>
+        <h3>{{ 'YO' | translate }}</h3>
+      </header>
+
+      <section *ngIf="orderHistoryList.length > 0">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th width="20%">{{ 'OTN' | translate }}</th>
+              <th width="10%">{{ 'TOT_PRICE' | translate }}</th>
+              <th width="10%">{{ 'TOT_QUAN' | translate }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let tempOrderHistory of orderHistoryList">
+              <td>{{ tempOrderHistory.orderTrackingNumber }}</td>
+              <td>{{ tempOrderHistory.totalPrice | currency : 'EUR' }}</td>
+              <td>{{ tempOrderHistory.totalQuantity }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- If order history is empty, show a message -->
+      <section *ngIf="orderHistoryList.length == 0" class="alert alert-warning col-md-12" role="alert">
+        {{ 'NOF' | translate }}
+      </section>
+    </section>
+  </section>
+</main>

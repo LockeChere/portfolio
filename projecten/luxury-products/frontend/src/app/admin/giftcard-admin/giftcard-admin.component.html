@@ -1,0 +1,168 @@
+<a class="back-btn" (click)="goToAdmin()">&larr; {{ 'admin.giftcard.back' | translate }}</a>
+<div class="giftcard-admin-container">
+  <h1>{{ 'admin.manage-giftcards' | translate }}</h1>
+
+  <!-- Error message -->
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+
+  <!-- Loading indicator -->
+  <div *ngIf="loading" class="loading-spinner">
+    {{ 'admin.giftcard.loading' | translate }}
+  </div>
+
+  <!-- Tab navigation -->
+  <div class="tab-navigation">
+    <button 
+      [class.active]="activeTab === 'purchased'" 
+      (click)="setActiveTab('purchased')">
+      {{ 'admin.giftcard.tabs.purchased' | translate }}
+    </button>
+    <button 
+      [class.active]="activeTab === 'products'" 
+      (click)="setActiveTab('products')">
+      {{ 'admin.giftcard.tabs.products' | translate }}
+    </button>
+  </div>
+
+  <!-- Purchased Gift Cards Tab -->
+  <div *ngIf="activeTab === 'purchased'" class="tab-content">
+    <!-- Create new purchased gift card form -->
+
+    <!-- Purchased gift cards list -->
+    <div class="list-section">
+      <h2>{{ 'admin.giftcard.purchased.title' | translate }}</h2>
+      <table *ngIf="purchasedGiftCards.length > 0">
+        <thead>
+          <tr>
+            <th>{{ 'admin.giftcard.purchased.id' | translate }}</th>
+            <th>{{ 'admin.giftcard.purchased.code' | translate }}</th>
+            <th>{{ 'admin.giftcard.purchased.value' | translate }}</th>
+            <th>{{ 'admin.giftcard.purchased.category' | translate }}</th>
+            <th>{{ 'admin.giftcard.purchased.actions' | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let giftCard of purchasedGiftCards">
+            <!-- View mode -->
+            <tr *ngIf="editingPurchasedGiftCard?.id !== giftCard.id">
+              <td>{{ giftCard.id }}</td>
+              <td>{{ giftCard.code }}</td>
+              <td>€{{ giftCard.value }}</td>
+              <td>{{ giftCard.category?.name || ('admin.giftcard.purchased.no-category' | translate) }}</td>
+              <td>
+                <button (click)="startEditingPurchasedGiftCard(giftCard)" [disabled]="loading">{{ 'admin.giftcard.purchased.edit' | translate }}</button>
+                <button (click)="deletePurchasedGiftCard(giftCard.id!)" [disabled]="loading">{{ 'admin.giftcard.purchased.delete' | translate }}</button>
+              </td>
+            </tr>
+            <!-- Edit mode -->
+            <tr *ngIf="editingPurchasedGiftCard?.id === giftCard.id">
+              <td>{{ giftCard.id }}</td>
+              <td>{{ giftCard.code }}</td>
+              <td>
+                <input type="number" [(ngModel)]="purchasedGiftCardEditForm.value" min="1" required>
+              </td>
+              <td>
+                <!-- Display category name instead of dropdown when editing -->
+                {{ editingPurchasedGiftCard?.category?.name || ('admin.giftcard.purchased.no-category' | translate) }}
+              </td>
+              <td>
+                <button (click)="savePurchasedGiftCard()" [disabled]="loading">{{ 'admin.giftcard.purchased.save' | translate }}</button>
+                <button (click)="cancelEditing()" [disabled]="loading">{{ 'admin.giftcard.purchased.cancel' | translate }}</button>
+              </td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+      <p *ngIf="purchasedGiftCards.length === 0 && !loading">{{ 'admin.giftcard.purchased.empty' | translate }}</p>
+    </div>
+  </div>
+
+  <!-- Gift Card Products Tab -->
+  <div *ngIf="activeTab === 'products'" class="tab-content">
+    <!-- Create new gift card product form -->
+    <div class="create-section">
+      <h2>{{ 'admin.giftcard.products.create-title' | translate }}</h2>
+      <div class="form-group">
+        <label for="newProductValue">{{ 'admin.giftcard.products.value-label' | translate }}</label>
+        <input type="number" id="newProductValue" [(ngModel)]="newGiftCardProduct.value" min="1" required>
+      </div>
+      <div class="form-group">
+        <label for="newProductCategory">{{ 'admin.giftcard.products.category-label' | translate }}</label>
+        <select id="newProductCategory" [(ngModel)]="newGiftCardProduct.categoryId">
+          <option [ngValue]="null">{{ 'admin.giftcard.products.no-category' | translate }}</option>
+          <option *ngFor="let category of categories" [ngValue]="category.id">{{ category.name }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="newProductImageUrl">{{ 'admin.giftcard.products.image-url-label' | translate }}</label>
+        <input type="text" id="newProductImageUrl" [(ngModel)]="newGiftCardProduct.imageUrl">
+      </div>
+      <div class="form-group">
+        <label for="newProductStock">{{ 'admin.giftcard.products.stock-label' | translate }}</label>
+        <input type="number" id="newProductStock" [(ngModel)]="newGiftCardProduct.stock" min="0">
+      </div>
+      <button 
+        (click)="createGiftCardProduct()" 
+        [disabled]="loading || newGiftCardProduct.value <= 0">
+        {{ 'admin.giftcard.products.create-button' | translate }}
+      </button>
+    </div>
+
+    <!-- Gift card products list -->
+    <div class="list-section">
+      <h2>{{ 'admin.giftcard.products.title' | translate }}</h2>
+      <table *ngIf="giftCardProducts.length > 0">
+        <thead>
+          <tr>
+            <th>{{ 'admin.giftcard.products.id' | translate }}</th>
+            <th>{{ 'admin.giftcard.products.name' | translate }}</th>
+            <th>{{ 'admin.giftcard.products.price' | translate }}</th>
+            <th>{{ 'admin.giftcard.products.stock' | translate }}</th>
+            <th>{{ 'admin.giftcard.products.category' | translate }}</th>
+            <th>{{ 'admin.giftcard.products.actions' | translate }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let product of giftCardProducts">
+            <!-- View mode -->
+            <tr *ngIf="editingGiftCardProduct?.id !== product.id">
+              <td>{{ product.id }}</td>
+              <td>{{ product.name }}</td>
+              <td>€{{ product.price }}</td>
+              <td>{{ product.stock }}</td>
+              <td>{{ product.category?.name || ('admin.giftcard.products.no-category' | translate) }}</td>
+              <td>
+                <button (click)="startEditingGiftCardProduct(product)" [disabled]="loading">{{ 'admin.giftcard.products.edit' | translate }}</button>
+                <button (click)="deleteGiftCardProduct(product.id)" [disabled]="loading">{{ 'admin.giftcard.products.delete' | translate }}</button>
+              </td>
+            </tr>
+            <!-- Edit mode -->
+            <tr *ngIf="editingGiftCardProduct?.id === product.id">
+              <td>{{ product.id }}</td>
+              <td>
+                <input type="text" [(ngModel)]="giftCardProductEditForm.name">
+              </td>
+              <td>
+                <input type="number" [(ngModel)]="giftCardProductEditForm.price" min="1" required>
+              </td>
+              <td>
+                <input type="number" [(ngModel)]="giftCardProductEditForm.stock" min="0">
+              </td>
+              <td>
+                <!-- Display category name instead of dropdown when editing -->
+                {{ editingGiftCardProduct?.category?.name || ('admin.giftcard.products.no-category' | translate) }}
+              </td>
+              <td>
+                <button (click)="saveGiftCardProduct()" [disabled]="loading">{{ 'admin.giftcard.products.save' | translate }}</button>
+                <button (click)="cancelEditing()" [disabled]="loading">{{ 'admin.giftcard.products.cancel' | translate }}</button>
+              </td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+      <p *ngIf="giftCardProducts.length === 0 && !loading">{{ 'admin.giftcard.products.empty' | translate }}</p>
+    </div>
+  </div>
+</div>

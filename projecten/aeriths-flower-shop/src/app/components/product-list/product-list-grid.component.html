@@ -1,0 +1,28 @@
+<section class="main-content">
+  <section class="section-content section-content-p30">
+    <section class="container-fluid">
+      <section class="row">
+        <!-- Loop over the collection of products -->
+        <article *ngFor="let tempProduct of products" class="col-md-3">
+          <figure class="product-box">
+            <a routerLink="/products/{{ tempProduct.id }}">
+              <img [src]="tempProduct.imgUrl | productImg" class="img-responsive" height="50" alt="{{ tempProduct.name }}"/>
+            </a>
+            <figcaption>
+              <a routerLink="/products/{{ tempProduct.id }}">
+                <h1>{{ tempProduct.name }}</h1>
+              </a>
+            </figcaption>
+            <div class="price">{{ tempProduct.price | currency: 'EUR' }}</div>
+            <button (click)="addToCart(tempProduct)" class="btn btn-primary btn-sm">{{ 'ATC' | translate }}</button>
+          </figure>
+        </article>
+
+        <!-- If products are empty, display a message -->
+        <section *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert">
+          No products found.
+        </section>
+      </section>
+    </section>
+  </section>
+</section>

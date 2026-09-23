@@ -1,0 +1,32 @@
+<div class="dock-container" *ngFor="let dock of docks">
+    <div class="dock-card">
+      <h2>Dock {{ dock.id }}</h2>
+      <p><strong>Level:</strong> {{ dock.level }}</p>
+      <p><strong>Size:</strong> {{ dock.size }}</p>
+  
+      <p><strong>Status:</strong>
+        <span *ngIf="dock.maintenance">🛠️ Onderhoud</span>
+        <span *ngIf="!dock.maintenance && dock.currentReservation">📦 Gereserveerd</span>
+        <span *ngIf="!dock.maintenance && !dock.currentReservation">✅ Vrij</span>
+      </p>
+  
+      <!-- Release knop als dock in onderhoud of gereserveerd is -->
+      <div *ngIf="dock.maintenance || dock.currentReservation">
+        <button class="release-btn" (click)="releaseDock(dock)">Release Dock</button>
+      </div>
+  
+      <!-- Disable knop als niets te releasen valt -->
+      <div *ngIf="!dock.maintenance && !dock.currentReservation">
+        <button class="release-btn" disabled>Cannot Release Dock</button>
+      </div>
+  
+      <div>
+        <button class="maintenance-btn"
+                (click)="setDockToMaintenance(dock)"
+                [disabled]="dock.maintenance">
+          Put on Maintenance
+        </button>
+      </div>
+    </div>
+  </div>
+  

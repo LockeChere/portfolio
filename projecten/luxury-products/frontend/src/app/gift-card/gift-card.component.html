@@ -1,0 +1,14 @@
+<h2>Beschikbare Giftcards</h2>
+
+<div *ngIf="giftCards.length > 0; else geenGiftcards">
+  <div *ngFor="let card of giftCards" class="giftcard">
+    <p>ID: {{ card.id }}</p>
+    <p>Waarde: €{{ card.value }}</p>
+    <p>Status: {{ card.used ? 'Gebruikt' : 'Beschikbaar' }}</p>
+    <button (click)="addToCart(card)" data-cy="giftcard-add-to-cart-btn">Toevoegen aan winkelwagen</button>
+  </div>
+</div>
+
+<ng-template #geenGiftcards>
+  <p>Er zijn momenteel geen giftcards beschikbaar.</p>
+</ng-template>

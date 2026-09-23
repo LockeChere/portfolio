@@ -1,0 +1,19 @@
+<div class="product-card" [class.out-of-stock]="product.stockStatus === 'OUT_OF_STOCK'">
+  <img [src]="product.imageUrl" [alt]="product.name" class="product-image">
+  <div class="product-info">
+    <h3>{{ product.name }}</h3>
+    <p class="description">{{ product.description }}</p>
+    <p class="price">€{{ product.price.toFixed(2) }}</p>
+    <div class="stock-status" [ngClass]="product.stockStatus?.toLowerCase()">
+      <span *ngIf="product.stockStatus === 'OUT_OF_STOCK'">Uitverkocht</span>
+      <span *ngIf="product.stockStatus === 'LOW_STOCK'">Laatste {{ product.stock }} stuks</span>
+      <span *ngIf="product.stockStatus === 'IN_STOCK'">Op voorraad</span>
+    </div>
+    <button 
+      [routerLink]="['/product', product.id]"
+      [disabled]="product.stockStatus === 'OUT_OF_STOCK'"
+      class="view-details-btn">
+      Bekijk details
+    </button>
+  </div>
+</div> 

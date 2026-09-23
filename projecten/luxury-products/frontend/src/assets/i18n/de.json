@@ -1,0 +1,301 @@
+{
+  "user": {
+    "info": "Mein Konto"
+  },
+  "cart": {
+    "title": "Warenkorb",
+    "amount": "Menge: ",
+    "total": "Gesamt: €",
+    "del": "Löschen",
+    "empty": "Warenkorb leeren",
+    "checkout": "Zur Kasse",
+    "noCart": "Ihr Warenkorb ist leer.",
+    "warning": "Sie müssen eingeloggt sein, um eine Bestellung aufzugeben.",
+    "giftCard": "Geschenkkarte",
+    "enterGiftCard": "Code eingeben",
+    "applyGiftCard": "Anwenden",
+    "giftCardApplied": "Geschenkkarte angewendet",
+    "removeGiftCard": "Code entfernen",
+    "giftCardUsed": "Geschenkkarte verwendet",
+    "giftCardRemaining": "Geschenkkarte verbleibend",
+    "promoCode": "Promo-Code",
+    "enterPromoCode": "Promo-Code eingeben",
+    "applyPromoCode": "Anwenden",
+    "promoCodeApplied": "Promo-Code angewendet",
+    "removePromoCode": "Promo-Code entfernen",
+    "promoDiscount": "Rabatt durch Promo-Code"
+  },
+  "product": {
+    "buy": "Kaufen",
+    "price": "Preis: €",
+    "add": "Zum Warenkorb hinzufügen",
+    "loading": "Produkt wird geladen...",
+    "stock": "Lagerbestand: ",
+    "out-of-stock": "Produkt nicht auf Lager",
+    "low-stock": "Niedriger Lagerbestand",
+    "in-stock": "Auf Lager",
+    "unavailable": "Nicht verfügbar"
+  },
+  "orders": {
+    "copy-success": "Code kopiert!",
+    "title": "Bestellung aufgeben",
+    "address": "Lieferadresse:",
+    "place": "Bestellung aufgeben",
+    "view": "Meine Bestellungen anzeigen",
+    "your-orders": "Ihre Bestellungen",
+    "order": "Bestellung #",
+    "total": "Gesamt: €",
+    "no-user": "Sie sind nicht eingeloggt",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "return": "Bestellung zurückgeben",
+    "return-form": {
+      "title": "Rücksendeformular",
+      "reason-placeholder": "Rücksendegrund auswählen",
+      "additional-info": "Zusätzliche Informationen für Rücksendung",
+      "additional-info-placeholder": "Geben Sie hier eventuelle zusätzliche Informationen zu Ihrer Rücksendung ein",
+      "photo-upload": "Foto des Schadens hochladen",
+      "photo-help": "Laden Sie ein klares Foto des Schadens oder Defekts hoch. Maximal 5MB. Erlaubte Formate: JPG, PNG, GIF",
+      "submit": "Rücksendung beantragen",
+      "errors": {
+        "not-an-image": "Bitte wählen Sie eine Bilddatei aus",
+        "file-too-large": "Dateigröße darf 5MB nicht überschreiten",
+        "submission-failed": "Rücksendeantrag konnte nicht eingereicht werden",
+        "not-authorized": "Sie sind nicht berechtigt, diese Bestellung zurückzugeben",
+        "order-not-found": "Bestellung nicht gefunden",
+        "session-expired": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an",
+        "not-eligible": "Diese Bestellung ist nicht für Rücksendung berechtigt (muss innerhalb von 30 Tagen nach Kauf sein)",
+        "invalid-request": "Ungültiger Rücksendeantrag. Bitte überprüfen Sie Ihre Eingabe",
+        "reason-required": "Bitte geben Sie einen Grund für die Rücksendung an",
+        "reason-too-short": "Rücksendegrund muss mindestens 10 Zeichen lang sein"
+      },
+      "reasons": {
+        "wrong_size": "Falsche Größe",
+        "damaged_or_defective": "Produkt beschädigt oder defekt",
+        "not_satisfied": "Ich mag das Produkt nicht",
+        "differs_from_description": "Produkt weicht von der Beschreibung ab",
+        "wrong_delivery": "Falsche Lieferung",
+        "wrong_color": "Falsche Farbe",
+        "damaged_packaging": "Beschädigte Verpackung",
+        "not_home_pickup": "Nicht zu Hause bei Abholung"
+      }
+    },
+    "return-error": "Rücksendegrund ist erforderlich",
+    "return-success": "Rücksendeantrag erfolgreich eingereicht",
+    "return-status": {
+      "pending": "Rücksendung in Bearbeitung",
+      "approved": "Rücksendung genehmigt",
+      "rejected": "Rücksendung abgelehnt",
+      "completed": "Rücksendung abgeschlossen"
+    }
+  },
+  "homepage": {
+    "welcome": "Willkommen bei Luxury Products",
+    "welcome-p": "Ihr Ziel für exquisite und hochwertige Luxusartikel.",
+    "collection": "Entdecken Sie unsere Kollektion",
+    "games": "Exklusive Kollektionen",
+    "games-p": "Entdecken Sie unsere sorgfältig kuratierten Auswahlen von weltbekannten Designern.",
+    "consoles": "Zeitlose Eleganz",
+    "consoles-p": "Erleben Sie den Gipfel des Handwerks und des raffinierten Designs.",
+    "accessories": "Premium-Qualität",
+    "accessories-p": "Genießen Sie Produkte aus den besten Materialien und mit akribischer Aufmerksamkeit für Details."
+  },
+  "header": {
+    "homepage": "Startseite",
+    "products": "Produkte",
+    "cart": "Warenkorb",
+    "reg": "Registrieren",
+    "admin": "Admin-Panel",
+    "user": "Mein Konto",
+    "logout": "Abmelden",
+    "login": "Anmelden",
+    "send": "Senden",
+    "cancel": "Abbrechen",
+    "reason-of-return": "Grund für Rücksendung",
+    "close": "Schließen"
+  },
+  "footer": {
+    "copyright": "© 2025 Luxury Products"
+  },
+  "category": {
+    "selector": "Kategorie auswählen: ",
+    "all": "Alle",
+    "watches": "Uhren",
+    "wristbands": "Armbänder",
+    "bags": "Taschen",
+    "glasses": "Brillen"
+  },
+  "auth": {
+    "register": "Registrieren",
+    "span-message-email": "Ungültige E-Mail angegeben",
+    "span-message-password": "Passwort nicht sicher genug",
+    "register-button": "Registrieren",
+    "password": "Passwort",
+    "password_confirm": "Passwort bestätigen",
+    "verification": "Verifizierungscode",
+    "new-admin": "Neuen Admin registrieren",
+    "hasAccount": "Haben Sie bereits ein Konto? ",
+    "login-link": "Hier anmelden",
+    "noAccount": "Noch kein Konto? ",
+    "register-link": "Hier registrieren",
+    "login": "Anmelden"
+  },
+  "blog": {
+    "header": "Sprache wechseln",
+    "text": "Dies ist ein kleiner Anfangstest, um zu sehen, wie ich die Sprache mit zwei Schaltflächen ändern kann. :)"
+  },
+  "switch-language": {
+    "switchToNL": "Sprache auf Niederländisch setzen",
+    "switchToEN": "Sprache auf Englisch setzen",
+    "switchToDE": "Sprache auf Deutsch setzen"
+  },
+  "language-settings": {
+    "constructor": {
+      "private translate": "TranslateService",
+      "defaultLang": "en",
+      "useLang": "en"
+    }
+  },
+  "order": {
+    "giftcardcode": "Geschenkkarten-Code"
+  },
+  "admin": {
+    "dashboard": "Admin-Dashboard",
+    "manage-products": "Produkte verwalten",
+    "manage-orders": "Bestellungen verwalten",
+    "manage-users": "Benutzer verwalten",
+    "manage-returns": "Rücksendungen verwalten",
+    "add-product": "Neues Produkt hinzufügen",
+    "existing-products": "Bestehende Produkte",
+    "manage-product-variants": "Produktvarianten verwalten",
+    "manage-giftcards": "Geschenkkarten verwalten",
+    "manage-promocodes": "Promo-Codes verwalten",
+    "promocode": {
+      "back-to-admin": "Zurück zur Admin-Übersicht",
+      "manage": "Hier können Sie Promo-Codes verwalten.",
+      "back": "Zurück",
+      "title": "Promo-Codes",
+      "create-button": "Neuen Promo-Code erstellen",
+      "hide-form": "Formular ausblenden",
+      "code": "Code",
+      "limit": "Limit",
+      "type": "Typ",
+      "discount": "Rabatt",
+      "expiration": "Ablaufdatum",
+      "usage": "Verwendung",
+      "last-used": "Zuletzt verwendet",
+      "actions": "Aktionen",
+      "edit": "Bearbeiten",
+      "delete": "Löschen",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "usage-table-title": "Verwendete Promo-Codes",
+      "user": "Benutzer",
+      "date": "Datum",
+      "products": "Produkte",
+      "create-failed": "Promo-Code konnte nicht erstellt werden",
+      "update-failed": "Promo-Code konnte nicht aktualisiert werden",
+      "delete-failed": "Promo-Code konnte nicht gelöscht werden",
+      "code-too-short": "Code muss mindestens 6 Zeichen lang sein",
+      "code-duplicate": "Dieser Code existiert bereits",
+      "limit-negative": "Limit darf nicht negativ sein",
+      "discount-negative": "Rabatt darf nicht negativ sein"
+    },
+    "giftcard": {
+      "back": "Zurück",
+      "tabs": {
+        "purchased": "Gekaufte Karten",
+        "products": "Geschenkkarten-Produkte"
+      },
+      "purchased": {
+        "title": "Gekaufte Geschenkkarten",
+        "id": "ID",
+        "code": "Code",
+        "value": "Betrag",
+        "used": "Verwendet",
+        "category": "Kategorie",
+        "actions": "Aktionen",
+        "yes": "Ja",
+        "no": "Nein",
+        "edit": "Bearbeiten",
+        "delete": "Löschen",
+        "purchase-date": "Kaufdatum",
+        "status": "Status",
+        "unused": "Nicht verwendet",
+        "save": "Speichern",
+        "cancel": "Abbrechen"
+      },
+      "products": {
+        "title": "Geschenkkarten-Produkte",
+        "create-title": "Geschenkkarten-Produkt erstellen",
+        "add-new": "Neue Geschenkkarte hinzufügen",
+        "name": "Name",
+        "description": "Beschreibung",
+        "price": "Preis",
+        "value-label": "Wert",
+        "category-label": "Kategorie",
+        "image-url-label": "Bild-URL",
+        "stock-label": "Lagerbestand",
+        "create-button": "Geschenkkarte erstellen",
+        "actions": "Aktionen",
+        "edit": "Bearbeiten",
+        "delete": "Löschen",
+        "save": "Speichern",
+        "cancel": "Abbrechen",
+        "id": "ID",
+        "stock": "Lagerbestand",
+        "category": "Kategorie",
+        "no-category": "Keine Kategorie"
+      }
+    },
+    "tabs": {
+      "returns": "Rücksendungen",
+      "products": "Produkte",
+      "orders": "Bestellungen",
+      "users": "Benutzer"
+    },
+    "returns": {
+      "manage": "Rücksendungen verwalten",
+      "id": "ID",
+      "user": "Benutzer",
+      "date": "Datum",
+      "status": "Status",
+      "total": "Gesamt",
+      "actions": "Aktionen",
+      "view-details": "Details anzeigen",
+      "approve": "Genehmigen",
+      "reject": "Ablehnen",
+      "details": "Rücksendungsdetails",
+      "photos": "Fotos"
+    },
+    "order": {
+      "id": "Bestellung ID",
+      "user-id": "Benutzer ID",
+      "date": "Datum",
+      "status": "Status",
+      "total": "Gesamt",
+      "actions": "Aktionen",
+      "view-details": "Details anzeigen",
+      "cancel": "Abbrechen",
+      "statuses": {
+        "pending": "In Bearbeitung",
+        "processing": "Wird verarbeitet",
+        "shipped": "Versendet",
+        "delivered": "Geliefert",
+        "cancelled": "Storniert"
+      }
+    },
+    "user": {
+      "id": "ID",
+      "email": "E-Mail",
+      "role": "Rolle",
+      "actions": "Aktionen",
+      "view-details": "Details anzeigen",
+      "delete": "Löschen",
+      "roles": {
+        "user": "Benutzer",
+        "admin": "Administrator"
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<header>
+  <a routerLink="" class="nav-link">
+    <span class="material-symbols-outlined">{{ 'HEADER.HOME' | translate }}</span>
+    
+  </a>
+
+  <app-accessibility></app-accessibility>
+
+  @if (isLoggedIn()) {
+  <a routerLink="/account" class="account-btn" (click)="GoToAccount()">
+    <span class="material-symbols-outlined">{{ 'HEADER.ACCOUNT' | translate }}</span>
+    
+  </a>
+  }
+  @else {
+    <a routerLink="/login" class="account-btn" (click)="GoToLogIn()">
+      <span class="material-symbols-outlined">{{ 'HEADER.ACCOUNT' | translate }}</span>
+      
+    </a>
+  }
+  @if (isLoggedIn()) {
+    <a class="nav-link" (click)="LogOut()">{{ 'HEADER.LOGOUT' | translate }}</a>
+  }
+
+  @if (isLoggedIn() && isAdmin()) {
+    <a class="admin-btn" routerLink="/admin-dashboard">
+      <mat-icon>admin_panel_settings</mat-icon>
+    </a>
+  }
+
+  <div class="dropdown" [class.open]="dropdown" (click)="toggleDropdown()" tabindex="0" (blur)="closeDropdown()">
+    <span>{{ currentLanguage.toUpperCase() }} ↓</span>
+    <ul *ngIf="dropdown" class="dropdown-list">
+      <li *ngFor="let lang of availableLanguages" (click)="switchLanguage(lang)">
+        <span *ngIf="lang === 'en'">English</span>
+        <span *ngIf="lang === 'nl'">Nederlands</span>
+        <span *ngIf="lang === 'gb'">Galactic Basic</span>
+      </li>
+    </ul>
+  </div>
+</header>

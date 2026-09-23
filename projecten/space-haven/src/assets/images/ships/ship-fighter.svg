@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+<defs><radialGradient id="bg" cx="50%" cy="40%" r="75%"><stop offset="0" stop-color="#1b2745"/><stop offset="1" stop-color="#05070f"/></radialGradient>
+<linearGradient id="hull" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e5e7eb"/><stop offset="1" stop-color="#6b7280"/></linearGradient></defs>
+<rect width="400" height="240" fill="url(#bg)"/>
+<g fill="#fff" opacity=".8"><circle cx="30" cy="30" r="1.5"/><circle cx="360" cy="40" r="1"/><circle cx="320" cy="200" r="1.5"/><circle cx="80" cy="190" r="1"/><circle cx="200" cy="20" r="1"/><circle cx="250" cy="215" r="1"/></g>
+<g transform="translate(200 120)">
+<path d="M-40 -8 L-110 -60 L-95 -60 L-20 -14 Z" fill="url(#hull)"/><path d="M-40 8 L-110 60 L-95 60 L-20 14 Z" fill="url(#hull)"/>
+<path d="M-70 -14 L90 -6 Q110 0 90 6 L-70 14 Z" fill="url(#hull)" stroke="#374151" stroke-width="2"/>
+<path d="M40 -5 L70 -3 Q78 0 70 3 L40 5 Z" fill="#60a5fa"/><rect x="-86" y="-10" width="16" height="20" rx="3" fill="#f97316"/>
+<path d="M-86 -6 L-120 0 L-86 6 Z" fill="#fb923c" opacity=".8"/></g>
+</svg>

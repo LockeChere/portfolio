@@ -1,0 +1,45 @@
+.dock-container {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem;
+  }
+  
+  .dock-card {
+    background-color: #1c2b3a;
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  
+    h2 {
+      color: #00adb5;
+      text-align: center;
+    }
+  
+    p {
+      font-size: 1rem;
+      color: #eeeeee;
+    }
+  
+    .release-btn, .maintenance-btn {
+      background-color: #00adb5;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background-color: #023e8a;
+        transform: scale(1.05);
+      }
+  
+      &:disabled {
+        background-color: #555;
+        cursor: not-allowed;
+      }
+    }
+  }
+  

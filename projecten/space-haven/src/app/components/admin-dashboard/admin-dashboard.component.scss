@@ -1,0 +1,70 @@
+/* Container voor het admin dashboard */
+.admin-dash {
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem;
+  border: 2px solid #00bfff;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5); /* Donkere achtergrond, passend bij ruimte-thema */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 2rem auto; /* Centraal uitlijnen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Verticaal centreren */
+  align-items: center; /* Horizontaal centreren */
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Titel van het admin dashboard */
+.title {
+  font-family: 'Star Jedi', sans-serif;
+  font-size: 2.5rem;
+  color: #caf0f8;
+  margin-bottom: 2rem;
+}
+
+/* Knoppen voor beheer */
+.manage-buttons {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Knop stijl voor beheer knoppen */
+.manage-btn {
+  padding: 1rem 2rem;
+  border: 2px solid #00b4d8;
+  background-color: #032f52; /* Donkerblauw voor ruimte-thema */
+  color: #caf0f8;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 180, 216, 0.3);
+
+  /* Mooie hover effecten */
+  &:hover {
+    background-color: #023e8a; /* Donkerblauw voor hover */
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.6);
+  }
+
+  /* Focus effect voor toegankelijkheid */
+  &:focus {
+    outline: none;
+    border-color: #00adb5;
+    box-shadow: 0 0 10px #00adb5;
+  }
+
+  /* Kleine schaduw voor meer diepte */
+  &:active {
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.5);
+  }
+}

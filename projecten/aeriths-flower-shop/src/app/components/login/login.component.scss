@@ -1,0 +1,94 @@
+// Algemene instellingen voor de pagina
+$primary-color: #4CAF50;
+$background-color: #feabd5;
+$white-color: #5f3030;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$input-border-color: #ffa5d2;
+$hover-color: #45a049;
+
+// Algemeen voor body
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+  margin-bottom: 40px;
+  padding: 0;
+
+}
+body{
+  overflow-y: auto;
+}
+
+main.container {
+  min-height: 100vh; // Zorgt ervoor dat de container altijd het hele scherm bedekt
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // Centraal plaatsen op het scherm
+}
+
+// Algemene container voor formulier
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: $white-color;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px $shadow-color;
+  overflow: auto;
+}
+
+// Hoofdtekst
+h2 {
+  text-align: center;
+  color: $primary-color;
+}
+
+// Labels voor invoervelden
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+// Invoer velden (email, password, text)
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: 1px solid $input-border-color;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+// Knop voor inloggen/registreren
+button {
+  background-color: $primary-color;
+  color: $white-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+// Opties voor registratie en login
+.register-option,
+.admin-option {
+  text-align: center;
+  margin-top: 20px;
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

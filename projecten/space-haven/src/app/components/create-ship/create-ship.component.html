@@ -1,0 +1,24 @@
+<form *ngIf="!editingShip" [formGroup]="shipForm" (ngSubmit)="addShip()">
+  <label for="shipTypeId">{{ "ACCOUNT.SHIPTYPE" | translate }}</label>
+  <select formControlName="shipTypeId" id="shipTypeId" required>
+    <option value="1">{{ "CREATE.MILITARY" | translate }}</option>
+    <option value="2">{{ "CREATE.NONMIL" | translate }}</option>
+  </select>
+  <label for="size">{{ "ACCOUNT.SHIPSIZE" | translate }}</label>
+  <select formControlName="size" id="size" required>
+    <option value="SMALL">{{ "CREATE.SMALL" | translate }}</option>
+    <option value="MEDIUM">{{ "CREATE.MEDIUM" | translate }}</option>
+    <option value="LARGE">{{ "CREATE.LARGE" | translate }}</option>
+  </select>
+  <label for="imgUrl">Image URL</label>
+  <input id="imgUrl" type="text" formControlName="imgUrl" placeholder="Image URL">
+
+  <label>
+    {{ "CREATE.DANGEROUSWARE" | translate }}
+    <input type="checkbox" formControlName="carryingDangerous">
+  </label>
+  <div class="submit-cancel">
+    <button type="submit">{{ "CREATE.ADDSHIP" | translate }}</button>
+    <button type="button" (click)="goToAccount()">{{ "CREATE.CANCEL" | translate }}</button>
+  </div>
+</form>

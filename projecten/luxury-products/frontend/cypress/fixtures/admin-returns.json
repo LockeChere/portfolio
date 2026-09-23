@@ -1,0 +1,22 @@
+{
+  "returns": [
+    {
+      "id": 1,
+      "orderId": "ORD123",
+      "customerEmail": "customer@example.com",
+      "productName": "Luxury Watch",
+      "returnReason": "Product damaged",
+      "status": "PENDING",
+      "createdAt": "2024-03-20T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "orderId": "ORD124",
+      "customerEmail": "customer2@example.com",
+      "productName": "Designer Bag",
+      "returnReason": "Wrong size",
+      "status": "APPROVED",
+      "createdAt": "2024-03-19T15:30:00Z"
+    }
+  ]
+} 

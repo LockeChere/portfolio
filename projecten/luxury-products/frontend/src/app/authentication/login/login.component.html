@@ -1,0 +1,31 @@
+<div class="form-container">
+  <h2>{{ 'auth.login' | translate }}</h2>
+  
+  @if (errorMessage) {
+    <div class="error-message">
+      {{ errorMessage | translate }}
+    </div>
+  }
+
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="form-group">
+      <label>{{ 'auth.email' | translate }}:</label>
+      <input type="text" formControlName="email" required/>
+      @if (email?.touched && email?.invalid){
+        <span>{{ 'auth.span-message-email' | translate }}</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label>{{ 'auth.password' | translate }}:</label>
+      <input type="password" formControlName="password" required/>
+      @if (password?.touched && password?.invalid){
+        <span>{{ 'auth.span-message-password' | translate }}</span>
+      }
+    </div>
+
+    <button type="submit" class="submit-btn">{{ 'auth.login' | translate }}</button>
+  </form>
+
+  <p>{{ 'auth.noAccount' | translate }}<a routerLink="/register">{{ 'auth.register-link' | translate }}</a></p>
+</div>

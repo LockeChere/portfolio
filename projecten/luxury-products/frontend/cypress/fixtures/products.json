@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Rolex Submariner",
+      "description": "Luxury diving watch with automatic movement",
+      "price": 7999.99,
+      "stock": 5,
+      "category": "Watches",
+      "imageUrl": "assets/images/rolex-submariner.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Louis Vuitton Neverfull MM",
+      "description": "Classic monogram canvas tote bag",
+      "price": 1650.00,
+      "stock": 8,
+      "category": "Bags",
+      "imageUrl": "assets/images/lv-neverfull.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Cartier Love Bracelet",
+      "description": "18k gold bracelet with screw motif",
+      "price": 7150.00,
+      "stock": 3,
+      "category": "Jewelry",
+      "imageUrl": "assets/images/cartier-love.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Gift Card €50",
+      "description": "Gift cards with a value of €50",
+      "price": 50.00,
+      "stock": 10,
+      "category": "Gift Cards",
+      "imageUrl": "assets/images/gift-card.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Gift Card €100",
+      "description": "Gift cards with a value of €100",
+      "price": 100.00,
+      "stock": 10,
+      "category": "Gift Cards",
+      "imageUrl": "assets/images/gift-card.jpg"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+.account-page {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+
+  .top-navigation {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    
+
+    button {
+      background: #737373;
+      border: none;
+      border-radius: 2rem;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      font-weight: 600;
+      font-family: 'Star Jedi', sans-serif;
+      cursor: pointer;
+      position: relative;
+      cursor: url('../../../assets/images/spaceship-cursor.png') 16 16, pointer;
+      box-shadow:
+        0 0 5px #ab00ce,
+        0 0 10px #ab00ce,
+        0 0 15px #ab00ce;
+      transition: box-shadow 0.3s ease-in-out;
+    
+      &.active,
+      &:hover {
+        background: #1aff00;
+        box-shadow:
+          0 0 10px #1aff00,
+          0 0 20px #1aff00,
+          0 0 30px #1aff00;
+      }
+    }
+    
+  }
+  .account-container {
+    width: 90%;
+    max-width: 700px;
+    padding: 2rem;
+    border: 2px solid #00bfff;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow:
+    0 0 10px #00bfff,
+    0 0 20px #00bfff,
+    0 0 30px #00bfff;
+    font-family: 'Star Jedi', sans-serif;
+    transition: box-shadow 0.3s ease-in-out;
+    
+
+    .account-header {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #ffffff;
+
+      .label {
+        font-weight: 600;
+        color: #cccccc;
+        text-transform: uppercase;
+      }
+
+      .value {
+        flex: 1;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .edit {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #00bfff;
+        padding: 0.4rem 0.7rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+
+        &:hover {
+          background-color: #00a5cc;
+        }
+      }
+    }
+  }
+
+  .vehicle-container {
+    width: 90%;
+    max-width: 700px;
+    padding: 2rem;
+    border: 2px solid #00bfff;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-family: 'Star Jedi', sans-serif;
+
+    .account-header {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #ffffff;
+
+      .label {
+        font-weight: 600;
+        color: #cccccc;
+        text-transform: uppercase;
+      }
+
+      .value {
+        flex: 1;
+        text-align: center;
+        color: #ffffff;
+      }
+
+      .edit {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: #00bfff;
+        padding: 0.4rem 0.7rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+
+        &:hover {
+          background-color: #00a5cc;
+        }
+      }
+    }
+  }
+}

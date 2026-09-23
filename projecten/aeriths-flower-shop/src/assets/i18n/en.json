@@ -1,0 +1,122 @@
+{
+    "BUTTON_TEXT": "Switch to Dutch",
+    "CHECKOUT": "Checkout",
+    "CONTACT_US": "Contact Us",
+    "ABOUT_US": "About Us",
+    "ADD_TO_CART": "Add to Cart",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name",
+    "SHIPPING_ADDRESS": "Shipping Address",
+    "BILLING_ADDRESS": "Billing Address",
+    "CARD_TYPE": "Card Type",
+    "NAME_ON_CARD": "Name on Card",
+    "CARD_NUMBER": "Card Number",
+    "SECURITY_CODE": "Security Code",
+    "EXPIRATION_MONTH": "Expiration Month",
+    "EXPIRATION_YEAR": "Expiration Year",
+    "RYO": "Review Your Order",
+    "TOT_QUAN": "Total Quantity",
+    "TOT_PRICE": "Total Price",
+    "SHIPPING": "Shipping",
+    "FREE": "FREE",
+    "PURCHASE": "Purchase",
+    "REMOVE": "Remove",
+    "PROD_IMG": "Product Image",
+    "PROD_DETAIL": "Product Detail",
+    "STREET": "Street",
+    "CITY": "City",
+    "ZIPCODE": "Zip code",
+    "LOGIN": "Login",
+    "LOGOUT": "Logout",
+    "REGISTER": "Register",
+    "MEMBER": "Member",
+    "ORDERS": "Orders",
+    "ATC": "Add to cart",
+    "BPL": "Back to product list",
+    "OTN": "Order Tracking Number",
+    "NOF": "No orders found",
+    "YO": "Your Orders",
+    "DESCR": "Description",
+    "NAME": "Name",
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "EDIT_PRO": "Edit Product",
+    "DELETE_PRO": "Delete Product",
+
+
+        "CART": {
+        "EMPTY": "Your shopping cart is empty."
+            },
+
+        "CATEGORY": {
+        "FLOWERS": "Flowers",
+        "TOOLS": "Tools",
+        "BOUQUETS": "Bouquet"
+        },
+
+       "PRODUCTS":{
+            "1" : {
+                "NAME": "Red rose",
+                "DESCRIPTION": "A beautiful red rose"
+            },
+            "2" : {
+                "NAME": "Sunflower",
+                "DESCRIPTION": "A beautiful sunflower"
+            },
+            "3" : {
+                "NAME": "Lily",
+                "DESCRIPTION": "A beautiful lily"
+            },
+            "4" : {
+                "NAME": "Spiderlily",
+                "DESCRIPTION": "A beautiful spider lily"},
+            "5" : {
+                "NAME": "Purple tulip",
+                "DESCRIPTION": "A beautiful purple tulip"},      
+            
+            "6" : {
+                "NAME": "Watering can",
+                "DESCRIPTION": "A handy watering can for when the plants need water"
+            },
+            "7" : {
+                "NAME": "Rake",
+                "DESCRIPTION": "To be able to remove leaves from the garden"
+            },
+            "8" : {
+                "NAME": "Shovel",
+                "DESCRIPTION": "A handy shovel to be able to scoop away soil"
+            },
+            "9" : {
+                "NAME": "Pickaxe",
+                "DESCRIPTION": "To remove rocks with"
+            },
+            "10" : {
+                "NAME": "Handsaw",
+                "DESCRIPTION": "To saw through wood"
+            },
+            "11" : {
+                "NAME": "Graduation bouquet",
+                "DESCRIPTION": "For when someone graduated"
+            },
+            "12" : {
+                "NAME": "Funeral bouquet",
+                "DESCRIPTION": "A bouquet for a funeral"
+            },
+            "13" : {
+                "NAME": "Wedding bouquet",
+                "DESCRIPTION": "For when someone is getting married"
+            },
+            "14" : {
+                "NAME": "Valentines bouquet",
+                "DESCRIPTION": "A bouquet for Valentinesday"
+            },
+            "15" : {
+                "NAME": "Birthday bouquet",
+                "DESCRIPTION": "A bouquet for a birthday"
+            }
+        }
+
+
+    }
+
+  

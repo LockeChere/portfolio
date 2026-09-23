@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Cadeaubon €100",
+    "price": 100,
+    "stock": 10,
+    "inStock": true,
+    "type": "giftcard",
+    "imageUrl": "https://via.placeholder.com/150",
+    "description": "Giftcard ter waarden van €100"
+  }
+] 

@@ -1,0 +1,32 @@
+<form [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()" class="reservation-form">
+  <h2 class="form-title">{{ 'RESERVATION.MAKE' | translate }}</h2>
+  <hr>
+
+  <div formGroupName="customer" class="form-group">
+    <label for="email">Email</label>
+    <input formControlName="email" placeholder="E-mail" class="input-field" />
+  </div>
+
+  <div formGroupName="reservation" class="form-group">
+    <label for="shipId">{{ 'RESERVATION.SHIP' | translate }}</label>
+    <select formControlName="shipId" class="select-field">
+      <option *ngFor="let ship of userShips"
+              [value]="ship.id"
+              [disabled]="(selectedDockSize && ship.size !== selectedDockSize) || (ship.carryingDangerous && hasReservedNeighborDocks()) || ( shipHasReservation(ship.id))">
+              ID: {{ ship.id }}, Size: {{ ship.size }}
+        {{ (selectedDockSize && ship.size !== selectedDockSize) || (ship.carryingDangerous && hasReservedNeighborDocks()) || ( shipHasReservation(ship.id))  ? ' (unavailable)' : '' }}
+      </option>
+    </select>
+
+    <label for="startTime">{{ 'RESERVATION.START' | translate }}</label>
+    <input type="datetime-local" formControlName="startTime" class="input-field" />
+
+    <label for="endTime">{{ 'RESERVATION.END' | translate }}</label>
+    <input type="datetime-local" formControlName="endTime" class="input-field" />
+  </div>
+
+  <div class="submit-cancel">
+    <button type="submit" class="submit-btn">{{ 'RESERVATION.CREATE' | translate }}</button>
+    <button type="button" class="cancel-btn" (click)="goToHangar()">{{ "RESERVATION.CANCEL" | translate }}</button>
+  </div>
+</form>

@@ -1,0 +1,6 @@
+{
+    "id": 1,
+    "email": "admin@bob.nl",
+    "password": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJVc2VyIERldGFpbHMiLCJpc3MiOiJEdWNrIFN0dWRpb3MiLCJleHAiOjE3NTI3Mjc0OTcsImlhdCI6MTc1MDkyNzQ5NywiZW1haWwiOiJhZG1pbkBib2IubmwifQ.xU6Byq3Zq3u5m4H_Kw04CtVeXSz8BxckIpw_OLPG2yM",
+    "role": "ROLE_ADMIN"
+}

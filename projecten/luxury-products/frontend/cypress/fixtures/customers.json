@@ -1,0 +1,46 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "email": "bob@admin.com",
+      "firstName": "John",
+      "lastName": "Doe",
+      "address": {
+        "street": "Hoofdstraat 1",
+        "city": "Amsterdam",
+        "postalCode": "1000 AA",
+        "country": "Netherlands"
+      },
+      "phoneNumber": "+31612345678",
+      "orders": [
+        {
+          "id": "ORD001",
+          "date": "2024-03-15",
+          "total": 7999.99,
+          "status": "DELIVERED"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "email": "sam@sam.com",
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "address": {
+        "street": "Kerkstraat 10",
+        "city": "Rotterdam",
+        "postalCode": "3000 AB",
+        "country": "Netherlands"
+      },
+      "phoneNumber": "+31687654321",
+      "orders": [
+        {
+          "id": "ORD002",
+          "date": "2024-03-18",
+          "total": 3450.00,
+          "status": "PROCESSING"
+        }
+      ]
+    }
+  ]
+} 

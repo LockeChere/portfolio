@@ -1,0 +1,13 @@
+{
+  "validGiftCard": {
+    "id": 1,
+    "value": 50,
+    "used": false,
+    "balance": 50,
+    "code": "GIFT-1234-5678-9ABC",
+    "categoryId": 1
+  },
+  "invalidGiftCard": {
+    "error": "Invalid gift card code"
+  }
+}

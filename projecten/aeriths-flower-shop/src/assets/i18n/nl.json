@@ -1,0 +1,119 @@
+{
+    "BUTTON_TEXT": "Schakel naar Engels",
+    "CHECKOUT": "Afrekenen",
+    "CONTACT_US": "Neem Contact Op",
+    "ABOUT_US": "Over Ons",
+    "ADD_TO_CART": "Toevoegen aan winkelwagen",
+    "FIRST_NAME": "Voornaam",
+    "LAST_NAME": "Achternaam",
+    "SHIPPING_ADDRESS": "Verzendadres",
+    "BILLING_ADDRESS": "Factuuradres",
+    "CARD_TYPE": "Kaart type",
+    "NAME_ON_CARD": "Naam op credit card",
+    "CARD_NUMBER": "Kaart nummer",
+    "SECURITY_CODE": "Beveiligings code",
+    "EXPIRATION_MONTH": "Vervalmaand",
+    "EXPIRATION_YEAR": "Vervaljaar",
+    "RYO": "Bekijk bestelling",
+    "TOT_QUAN": "Totale hoeveelheid",
+    "TOT_PRICE": "Totale prijs",
+    "SHIPPING": "Verzendkosten",
+    "FREE": "GRATIS",
+    "PURCHASE": "Betalen",
+    "REMOVE": "Verwijderden",
+    "PROD_IMG": "Product Afbeelding",
+    "PROD_DETAIL": "Product Details",
+    "STREET": "Straat",
+    "CITY": "Stad",
+    "ZIPCODE": "Postcode",
+    "LOGIN": "Inloggen",
+    "LOGOUT": "Uitloggen",
+    "REGISTER": "Registreren",
+    "MEMBER": "Lid",
+    "ORDERS": "Bestellingen",
+    "ATC": "Toevoegen aan winkelwagen",
+    "BPL": "Terug naar hoofdpagina",
+    "OTN": "Volgnummer van bestelling",
+    "NOF": "Geen bestellingen gevonden",
+    "YO": "Jouw Bestellingen",
+    "DESCR": "Omschrijving",
+    "NAME": "Naam",
+    "SAVE": "Opslaan",
+    "CANCEL": "Annuleren",
+    "EDIT_PRO": "Product Bewerken",
+    "DELETE_PRO": "Product Verwijderen",
+    
+
+        "CART": {
+        "EMPTY": "Je winkelwagen is leeg."
+        },
+
+        "CATEGORY": {
+            "FLOWERS": "Bloemen",
+            "TOOLS": "Gereedschap",
+            "BOUQUETS": "Boeketten"
+        },
+
+        "PRODUCTS":{
+            "1" : {
+                "NAME": "Rode Roos",
+                "DESCRIPTION": "Een prachtige rode roos"
+            },
+            "2" : {
+                "NAME": "Zonnebloem",
+                "DESCRIPTION": "Een prachtige zonnebloem"
+            },
+            "3" : {
+                "NAME": "Lelie",
+                "DESCRIPTION": "Een prachtige witte lelie"
+            },
+            "4" : {
+                "NAME": "Spinnelelie",
+                "DESCRIPTION": "Een prachtige spinne lelie"},
+            "5" : {
+                "NAME": "Paarse tulp",
+                "DESCRIPTION": "Een prachtige paarse tulp"},      
+            
+            "6" : {
+                "NAME": "Gieter",
+                "DESCRIPTION": "Een handige gieter voor als de planten water nodig hebben"
+            },
+            "7" : {
+                "NAME": "Hark",
+                "DESCRIPTION": "Om bladeren weg te kunnen halen van de tuin"
+            },
+            "8" : {
+                "NAME": "Schep",
+                "DESCRIPTION": "Een handige schep om grond te kunnen wegscheppen"
+            },
+            "9" : {
+                "NAME": "Pikhouweel",
+                "DESCRIPTION": "Om stenen weg te halen"
+            },
+            "10" : {
+                "NAME": "Handzaag",
+                "DESCRIPTION": "Om hout mee door te zagen"
+            },
+            "11" : {
+                "NAME": "Een boeket voor afstuderen",
+                "DESCRIPTION": "Voor als iemand is geslaagd"
+            },
+            "12" : {
+                "NAME": "Een boeket voor een begrafenis",
+                "DESCRIPTION": "Boeket voor een begrafenis."
+            },
+            "13" : {
+                "NAME": "Een boeket voor een trouwerij",
+                "DESCRIPTION": "Boeket voor als iemand gaat trouwen"
+            },
+            "14" : {
+                "NAME": "Valentijnsdag boeket",
+                "DESCRIPTION": "Een boeket voor valentijsdag"
+            },
+            "15" : {
+                "NAME": "Boeket voor verjaardag",
+                "DESCRIPTION": "A beautiful red rose"
+            }
+        }
+    }
+  

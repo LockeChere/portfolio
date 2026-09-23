@@ -1,0 +1,12 @@
+<div *ngIf="ships.length > 0; else noShips">
+  <section *ngFor="let tempShip of ships" class="ship-card">
+    <h2><strong>{{ 'ACCOUNT.SHIP' | translate }}</strong> {{ tempShip.id }}</h2>
+    <p><strong>{{ 'ACCOUNT.SHIPSIZE' | translate }}</strong> {{ tempShip.size }}</p>
+    <p><strong>{{ 'ACCOUNT.SHIPTYPE' | translate }}</strong> {{ tempShip.shipType?.type }}</p>
+    <img [src]="tempShip.imageUrl" alt="Image of ship with url: {{tempShip.imageUrl}}" class="ship-image" />
+  </section>
+</div>
+
+<ng-template #noShips>
+  <p>{{ 'ACCOUNT.NOSHIPS' | translate }}.</p>
+</ng-template>

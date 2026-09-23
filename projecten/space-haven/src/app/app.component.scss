@@ -1,0 +1,36 @@
+.app-background {
+  background-image: url('../assets/images/challengeweek_bg.png');
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center center;
+  opacity: 0.95;
+  min-height: 100vh;
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .app-background {
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+main {
+  color: white;
+}
+
+#sparkle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+
+
