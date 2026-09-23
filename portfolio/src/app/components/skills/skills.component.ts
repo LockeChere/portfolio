@@ -110,7 +110,7 @@ export class SkillsComponent {
     {
       category: 'Frameworks & Tools',
       icon: '⚙️',
-      skills: ['Angular', 'Springboot', 'Vue3', 'Docker', 'ETL']
+      skills: ['Angular', 'Springboot', 'Vue3', 'Flutter', 'Docker', 'ETL']
     },
     {
       category: 'Data & AI',
@@ -120,7 +120,7 @@ export class SkillsComponent {
     {
       category: 'Design & 3D',
       icon: '🎨',
-      skills: ['Autodesk Revit', 'ArcGIS', 'Photoshop', 'Blender', 'Unity', 'Unreal Engine 5', 'Tiled']
+      skills: ['Figma', 'Autodesk Revit', 'ArcGIS', 'Photoshop', 'Blender', 'Unity', 'Unreal Engine 5', 'Tiled']
     },
     {
       category: 'Overig',

@@ -137,6 +137,17 @@ interface Experience {
 export class ExperienceComponent {
   experiences: Experience[] = [
     {
+      title: 'UX Stagiair',
+      company: 'StudieStap',
+      period: 'September 2026 – heden',
+      current: true,
+      tasks: [
+        'Onderzoek, ontwerp en testen van de feedback-ervaring van een AI-coach voor StudieStappers',
+        'Enquêtes en gesprekken met StudieStappers om hun behoeften in kaart te brengen',
+        'Meebouwen aan de front-end van het prototype'
+      ]
+    },
+    {
       title: 'Mantelzorger',
       company: 'Privé',
       period: 'Februari 2020 – heden',
