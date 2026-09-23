@@ -25,6 +25,11 @@ build_angular projecten/aeriths-flower-shop      projecten/aeriths-flower-shop
 build_angular projecten/luxury-products/frontend projecten/luxury-products
 build_angular projecten/space-haven              projecten/space-haven
 
+echo "▶ Bouwen: projecten/evolutionaire-psychologie (Vue + Vite)"
+(cd "$ROOT/projecten/evolutionaire-psychologie" && npm ci --no-audit --no-fund && npx vite build)
+mkdir -p "$OUT/projecten/evolutionaire-psychologie"
+cp -r "$ROOT/projecten/evolutionaire-psychologie/dist"/. "$OUT/projecten/evolutionaire-psychologie"/
+
 echo "▶ Kopiëren: Landbouw minigame (statisch ontwerp)"
 mkdir -p "$OUT/projecten/landbouw-minigame"
 cp -r "$ROOT/projecten/landbouw-minigame"/. "$OUT/projecten/landbouw-minigame"/

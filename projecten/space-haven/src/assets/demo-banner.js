@@ -7,6 +7,7 @@
   var s = document.currentScript;
   var home = (s && s.getAttribute('data-home')) || '../../';
   var hint = (s && s.getAttribute('data-hint')) || '';
+  var mode = (s && s.getAttribute('data-mode')) || 'demo'; // 'demo' of 'nav' (alleen een link terug)
   var KEY = 'demo-banner-collapsed';
 
   function reset() {
@@ -39,6 +40,12 @@
     var bar = document.createElement('div');
     bar.className = 'demo-bar' + (collapsed ? ' is-min' : '');
     bar.setAttribute('role', 'note');
+    if (mode === 'nav') {
+      bar.className = 'demo-bar';
+      bar.innerHTML = '<div class="demo-bar__in"><a href="' + home + '">← Portfolio</a></div>';
+      document.body.appendChild(bar);
+      return;
+    }
     bar.innerHTML =
       '<div class="demo-bar__in demo-bar__full">' +
         '<span><b>Demoversie</b> · draait zonder server, met voorbeelddata in je browser</span>' +

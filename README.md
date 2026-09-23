@@ -8,11 +8,12 @@ Mijn portfolio met al mijn projecten, volledig statisch gehost op **GitHub Pages
 | Luxury Products Webshop | Werkende webshop met het giftcard-systeem | `projecten/luxury-products/` |
 | Aerith's Flower Shop | Werkende bloemenshop | `projecten/aeriths-flower-shop/` |
 | Space Haven | Werkend reserveringssysteem voor ruimteschepen | `projecten/space-haven/` |
-| Landbouw Minigame | Galerij van het Figma-ontwerp | `projecten/landbouw-minigame/` |
+| Oerbrein (Evolutionaire Psychologie) | Speelbaar Vue-spel (UXADVANCED 2) | `projecten/evolutionaire-psychologie/` |
+| Landbouw Minigame | Galerij van het Figma-ontwerp (UXADVANCED 1) | `projecten/landbouw-minigame/` |
 
 ## Hoe werken de projecten zonder backend?
 
-De Angular-frontends praten niet meer met de Spring Boot-API. Ze gebruiken een kleine "demo-database" in de browser (localStorage) die dezelfde regels volgt als de echte backend. Bij de webshop betekent dat bijvoorbeeld dat de voorraad afneemt, dat er bij het kopen van een cadeaubon een code wordt aangemaakt en dat je die code later weer kunt inwisselen. Iedere bezoeker begint met dezelfde voorbeelddata, en wat je verandert blijft alleen in je eigen browser bewaard. Met de knop **Reset data** in de demobalk zet je alles terug naar de beginstand.
+Oerbrein en de Landbouw Minigame hadden nooit een backend nodig: Oerbrein wordt gewoon met Vite gebouwd en het Landbouw-ontwerp is een statische pagina. De Angular-frontends praten niet meer met de Spring Boot-API. Ze gebruiken een kleine "demo-database" in de browser (localStorage) die dezelfde regels volgt als de echte backend. Bij de webshop betekent dat bijvoorbeeld dat de voorraad afneemt, dat er bij het kopen van een cadeaubon een code wordt aangemaakt en dat je die code later weer kunt inwisselen. Iedere bezoeker begint met dezelfde voorbeelddata, en wat je verandert blijft alleen in je eigen browser bewaard. Met de knop **Reset data** in de demobalk zet je alles terug naar de beginstand.
 
 De code daarvoor staat per project in `src/app/demo/`. De originele backend-code van Luxury Products staat nog in `projecten/luxury-products/backend/`, zodat je kunt laten zien hoe de Spring Boot-kant in elkaar zit.
 

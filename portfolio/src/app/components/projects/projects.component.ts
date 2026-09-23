@@ -176,13 +176,24 @@ export class ProjectsComponent {
       link: 'projecten/space-haven/'
     },
     {
+      title: 'Oerbrein — Evolutionaire Psychologie',
+      description: 'Stress-keuzespel voor StudieStap over hoe je oerbrein reageert op stress.',
+      longDescription: 'Groepsproject voor UXADVANCED 2: een educatief spel voor bovenbouwleerlingen over de vijf stressreacties (fight, flight, freeze, fawn en tend-and-befriend). Je loopt over een kaart naar verschillende scenario\'s en ontdekt na elke keuze welke reactie je oerbrein koos. Als developer bouwde ik het startscherm, het introscherm, het eindscherm en het scenario Groepsdruk, een groepschat met een afteltimer.',
+      tags: ['Vue 3', 'Vite', 'JavaScript', 'Game design'],
+      icon: '🧠',
+      type: 'groep',
+      role: 'Developer (Home-, Intro- en Endscreen, scenario Groepsdruk)',
+      link: 'projecten/evolutionaire-psychologie/',
+      linkLabel: 'Speel het spel'
+    },
+    {
       title: 'Landbouw Minigame',
       description: 'Figma-ontwerp van een pixel-art minigame over duurzaam boeren.',
-      longDescription: 'Ontwerp van alle schermen van een minigame waarin je zes beurten lang een boerderij beheert. Elke keuze (zaaien, omheinen, plagen bestrijden) heeft direct effect op geld, bodemkwaliteit en biodiversiteit, en willekeurige gebeurtenissen zoals droogte gooien roet in het eten.',
+      longDescription: 'Ontwerp voor UXADVANCED 1, samen met een medestudent. In het spel beheer je zes beurten lang een boerderij, en elke keuze (zaaien, omheinen, plagen bestrijden) heeft direct effect op geld, bodemkwaliteit en biodiversiteit. Als UX\'er ontwierp ik vooral het akkerbouw-gedeelte.',
       tags: ['Figma', 'UI/UX', 'Game design', 'Pixel art'],
       icon: '🌾',
-      type: 'solo',
-      role: 'UI/UX- en game-ontwerp',
+      type: 'groep',
+      role: 'UX-ontwerper (akkerbouw)',
       link: 'projecten/landbouw-minigame/',
       linkLabel: 'Bekijk het ontwerp'
     }
